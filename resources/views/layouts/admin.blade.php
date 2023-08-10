@@ -29,7 +29,7 @@
                     background-color: #182B45;
                 }
             </style>
-            <span class="brand-text font-weight-light" style="margin-left: 88px">Uy bozorim</span>
+            <span class="brand-text font-weight-light" style="margin-left: 78px">Uy bozorim</span>
         </a>
         <div class="sidebar" style="background-color: #182B45">
             <nav class="mt-2">
@@ -61,10 +61,10 @@
 
                     {{-- start  --}}
                        <li class="nav-item">
-                        <a href="{{ route('team.index') }}" class="nav-link">
+                        <a href="{{ route('houseimage.index') }}" class="nav-link">
                         <i class="nav-icon"></i>
                         <p>
-                            Team
+                            House Image
                             <i class="right fas fa-angle-left"></i>
                         </p>
                         </a>
