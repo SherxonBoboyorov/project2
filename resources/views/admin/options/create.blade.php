@@ -27,17 +27,14 @@
                               <select name="key" id="key" class="form-control">
                                   <option value="address_uz">Address Uz</option>
                                   <option value="address_ru">Address Ru</option>
-                                  <option value="address_en">Address En</option>
                                   <option value="lanrdmarks_uz">Lanrdmarks UZ</option>
                                   <option value="lanrdmarks_ru">Lanrdmarks RU</option>
-                                  <option value="lanrdmarks_en">Lanrdmarks EN</option>
                                   <option value="phone">Phone</option>
-                                  <option value="fax">Fax</option>
-                                  <option value="email">E-mail</option>
                                   <option value="map">Google or Yandex MAP</option>
                                   <option value="instagram">Instagram</option>
-                                  <option value="facebook">Facebook</option>
                                   <option value="youtube">Youtube</option>
+                                  <option value="facebook">Facebook</option>
+                                  <option value="telegram">Telegram</option>
                               </select>
                               @if($errors->has('key'))
                                   <div class="alert alert-success alert-dismissible fade show" role="alert">
