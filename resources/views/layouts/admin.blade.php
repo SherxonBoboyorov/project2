@@ -89,7 +89,7 @@
                         <a href="{{ route('event.index') }}" class="nav-link">
                         <i class="nav-icon"></i>
                         <p>
-                            Event
+                            Feedback
                             <i class="right fas fa-angle-left"></i>
                         </p>
                         </a>

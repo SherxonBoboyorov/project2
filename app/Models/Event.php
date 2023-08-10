@@ -16,20 +16,9 @@ class Event extends Model
         'image',
         'title_ru',
         'title_uz',
-        'title_en',
-        'slug_ru',
-        'slug_uz',
-        'slug_en',
         'content_ru',
         'content_uz',
-        'content_en',
         'frame',
-        'meta_title_ru',
-        'meta_title_uz',
-        'meta_title_en',
-        'meta_description_ru',
-        'meta_description_uz',
-        'meta_description_en',
     ];
 
 

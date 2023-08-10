@@ -8,13 +8,13 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="page-title-box">
-                    <h4 class="page-title">All Event</h4>
+                    <h4 class="page-title">All Feedback</h4>
                 </div>
             </div>
             <div class="clearfix"></div>
         </div>
 
-             <a href="{{ route('event.create')}}" class="btn bg-success mb-2">Add Event +</a>
+             <a href="{{ route('event.create')}}" class="btn bg-success mb-2">Add Feedback +</a>
 
 
         <div class="card">
@@ -36,9 +36,8 @@
                         <tr>
                             <th style="width: 2%;">#</th>
                             <th>Image</th>
-                            <th>Title [Uzbek]</th>
-                            <th>Title [Russian]</th>
-                            <th>Title [English]</th>
+                            <th>Name [Uzbek]</th>
+                            <th>Name [Russian]</th>
                             <th colspan="2" style="width: 2%;">Actions</th>
                         </tr>
                     </thead>
@@ -51,7 +50,6 @@
                             </td>
                             <td>{{ $event->title_uz }}</td>
                             <td>{{ $event->title_ru }}</td>
-                            <td>{{ $event->title_en }}</td>
                             <td>
                                 <a href="{{ route('event.edit', $event->id) }}" class="btn btn-primary btn-icon">
                                     <i class="fa fa-edit">Edit</i>

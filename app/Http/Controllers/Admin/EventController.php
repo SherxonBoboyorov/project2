@@ -8,7 +8,6 @@ use App\Http\Requests\Admin\UpdateEvent;
 use App\Models\Event;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Str;
 
 class EventController extends Controller
 {
@@ -44,9 +43,6 @@ class EventController extends Controller
         $data = $request->all();
 
         $data['image'] = Event::uploadImage($request);
-        $data['slug_ru'] = Str::slug($request->title_ru, '-', 'ru');
-        $data['slug_uz'] = Str::slug($request->title_uz, '-', 'uz');
-        $data['slug_en'] = Str::slug($request->title_en, '-', 'en');
 
         if (Event::create($data)) {
             return redirect()->route('event.index')->with('message', "Event created seccessfully");
@@ -94,10 +90,6 @@ class EventController extends Controller
 
         $data = $request->all();
         $data['image'] = Event::updateImage($request, $event);
-
-        $data['slug_ru'] = Str::slug($request->title_ru, '-', 'ru');
-        $data['slug_uz'] = Str::slug($request->title_uz, '-', 'uz');
-        $data['slug_en'] = Str::slug($request->title_en, '-', 'en');
 
         if ($event->update($data)) {
             return redirect()->route('event.index')->with('message', "Event changed successfully");
