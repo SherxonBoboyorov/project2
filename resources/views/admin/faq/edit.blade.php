@@ -8,22 +8,22 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="page-title-box">
-                    <h4 class="page-title">Edit Activity Category</h4>
+                    <h4 class="page-title">Edit FAQ</h4>
                 </div>
             </div>
             <div class="clearfix"></div>
         </div>
 
         <!-- end page title end breadcrumb -->
-        <form action="{{ route('activitycategory.update', $activitycategory->id) }}" enctype="multipart/form-data" method="POST">
+        <form action="{{ route('faq.update', $faq->id) }}" enctype="multipart/form-data" method="POST">
             @csrf
             @method('PUT')
             <div class="card">
                 <div class="card-body">
                     <div class="row" style="margin-top: 15px">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <label for="title_uz">Title [Uzbek]</label>
-                            <input type="text" id="title_uz" value="{{ $activitycategory->title_uz }}" class="form-control" name="title_uz">
+                            <input type="text" id="title_uz" value="{{ $faq->title_uz }}" class="form-control" name="title_uz">
                             @if($errors->has('title_uz'))
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -33,9 +33,9 @@
                             </div>
                             @endif
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <label for="title_ru">Title [Russian]</label>
-                            <input type="text" id="title_ru" value="{{ $activitycategory->title_ru }}" class="form-control" name="title_ru">
+                            <input type="text" id="title_ru" value="{{ $faq->title_ru }}" class="form-control" name="title_ru">
                             @if($errors->has('title_ru'))
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -45,19 +45,36 @@
                             </div>
                             @endif
                         </div>
-                        <div class="col-md-4">
-                            <label for="title_en">Title [English]</label>
-                            <input type="text" id="title_en" value="{{ $activitycategory->title_en }}" class="form-control" name="title_en">
-                            @if($errors->has('title_en'))
+                     </div><br>
+
+                    <div class="row" style="margin-top: 15px">
+                        <div class="col-md-12">
+                            <label for="content_uz">Content [Uzbek]</label>
+                            <textarea name="content_uz" class="my-editor" id="content_uz" cols="30" rows="10">{{ $faq->content_uz }}</textarea>
+                            @if($errors->has('content_uz'))
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                {{ $errors->first('title_en') }}
+                                {{ $errors->first('content_uz') }}
                             </div>
                             @endif
                         </div>
-                     </div><br>
+                    </div>
+                    <div class="row" style="margin-top: 15px">
+                        <div class="col-md-12">
+                            <label for="content_ru">Content [Russian]</label>
+                            <textarea name="content_ru" class="my-editor" id="content_ru" cols="30" rows="10">{{ $faq->content_ru }}</textarea>
+                            @if($errors->has('content_ru'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                {{ $errors->first('content_ru') }}
+                            </div>
+                            @endif
+                        </div>
+                    </div>
 
                     <div class="row" style="margin-top: 15px">
                         <div class="col-md-12">

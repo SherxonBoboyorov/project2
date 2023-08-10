@@ -5,21 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ActivityCategory extends Model
+class Faq extends Model
 {
     use HasFactory;
 
-    protected $table = 'activity_categories';
+    protected $table = 'faqs';
 
     protected $fillable = [
         'title_ru',
         'title_uz',
-        'title_en',
+        'content_ru',
+        'content_uz',
     ];
-
-
-    public function activities()
-    {
-        return $this->hasMany(Activity::class);
-    }
 }

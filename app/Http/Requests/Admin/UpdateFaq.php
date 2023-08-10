@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateActivityCategory extends FormRequest
+class UpdateFaq extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,7 +26,8 @@ class UpdateActivityCategory extends FormRequest
         return [
             'title_ru' => 'required|string|max:255',
             'title_uz' => 'required|string|max:255',
-            'title_en' => 'required|string|max:255',
+            'content_ru' => 'required|string',
+            'content_uz' => 'required|string',
         ];
     }
 }

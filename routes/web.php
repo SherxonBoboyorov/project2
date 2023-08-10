@@ -8,9 +8,8 @@ use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\OptionsController;
-use App\Http\Controllers\Admin\ActivityCategoryController;
-use App\Http\Controllers\Admin\ActivityController;
 use App\Http\Controllers\Admin\EventController;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\HouseImageController;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
 
@@ -28,10 +27,9 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'article' => ArticleController::class,
         'options' => OptionsController::class,
         'houseimage' => HouseImageController::class,
-        'activitycategory' => ActivityCategoryController::class,
-        'activity' => ActivityController::class,
-        'event' => EventController::class
-    ]);
+        'event' => EventController::class,
+        'faq' => FaqController::class
+        ]);
 });
 
 
