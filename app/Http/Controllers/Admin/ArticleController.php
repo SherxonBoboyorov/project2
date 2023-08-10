@@ -8,7 +8,6 @@ use App\Http\Requests\Admin\UpdateArticle;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Str;
 
 class ArticleController extends Controller
 {
@@ -44,9 +43,6 @@ class ArticleController extends Controller
         $data = $request->all();
 
         $data['image'] = Article::uploadImage($request);
-        $data['slug_ru'] = Str::slug($request->title_ru, '-', 'ru');
-        $data['slug_uz'] = Str::slug($request->title_uz, '-', 'uz');
-        $data['slug_en'] = Str::slug($request->title_en, '-', 'en');
 
         if (Article::create($data)) {
             return redirect()->route('article.index')->with('message', "Article created seccessfully");
@@ -94,10 +90,6 @@ class ArticleController extends Controller
 
         $data = $request->all();
         $data['image'] = Article::updateImage($request, $article);
-
-        $data['slug_ru'] = Str::slug($request->title_ru, '-', 'ru');
-        $data['slug_uz'] = Str::slug($request->title_uz, '-', 'uz');
-        $data['slug_en'] = Str::slug($request->title_en, '-', 'en');
 
         if ($article->update($data)) {
             return redirect()->route('article.index')->with('message', "Article changed successfully");

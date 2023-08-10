@@ -8,13 +8,13 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="page-title-box">
-                    <h4 class="page-title">All Article</h4>
+                    <h4 class="page-title">All Branches</h4>
                 </div>
             </div>
             <div class="clearfix"></div>
         </div>
 
-             <a href="{{ route('article.create')}}" class="btn bg-success mb-2">Add Article +</a>
+             <a href="{{ route('article.create')}}" class="btn bg-success mb-2">Add Branches +</a>
 
 
         <div class="card">
@@ -38,7 +38,6 @@
                             <th>Image</th>
                             <th>Title [Uzbek]</th>
                             <th>Title [Russian]</th>
-                            <th>Title [English]</th>
                             <th colspan="2" style="width: 2%;">Actions</th>
                         </tr>
                     </thead>
@@ -51,7 +50,6 @@
                             </td>
                             <td>{{ $article->title_uz }}</td>
                             <td>{{ $article->title_ru }}</td>
-                            <td>{{ $article->title_en }}</td>
                             <td>
                                 <a href="{{ route('article.edit', $article->id) }}" class="btn btn-primary btn-icon">
                                     <i class="fa fa-edit">Edit</i>

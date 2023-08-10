@@ -29,7 +29,7 @@
                     background-color: #182B45;
                 }
             </style>
-            <span class="brand-text font-weight-light" style="margin-left: 78px">Uy bozorim</span>
+            <span class="brand-text font-weight-light" style="margin-left: 68px">Uy bozorim</span>
         </a>
         <div class="sidebar" style="background-color: #182B45">
             <nav class="mt-2">
@@ -70,40 +70,13 @@
                         </a>
                      </li>
                     {{-- end  --}}
-                    
-
-
-
-                     {{-- start  --}}
-                     <li class="nav-item">
-                        <a href="{{ route('activitycategory.index') }}" class="nav-link">
-                        <i class="nav-icon"></i>
-                        <p>
-                            Activity Category
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                        </a>
-                     </li>
-                    {{-- end  --}}
-
-                      {{-- start  --}}
-                      <li class="nav-item">
-                        <a href="{{ route('activity.index') }}" class="nav-link">
-                        <i class="nav-icon"></i>
-                        <p>
-                            Activity
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                        </a>
-                     </li>
-                    {{-- end  --}}
 
                     {{-- start  --}}
                      <li class="nav-item">
                         <a href="{{ route('article.index') }}" class="nav-link">
                         <i class="nav-icon"></i>
                         <p>
-                            News
+                            Our branches
                             <i class="right fas fa-angle-left"></i>
                         </p>
                         </a>
