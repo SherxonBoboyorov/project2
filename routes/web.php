@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\OptionsController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\HouseImageController;
+use App\Http\Controllers\Admin\IntegrationController;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -28,7 +29,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'options' => OptionsController::class,
         'houseimage' => HouseImageController::class,
         'event' => EventController::class,
-        'faq' => FaqController::class
+        'faq' => FaqController::class,
+        'integration' => IntegrationController::class
         ]);
 });
 
