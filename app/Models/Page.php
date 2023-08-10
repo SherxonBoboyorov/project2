@@ -14,21 +14,14 @@ class Page extends Model
 
     protected $fillable = [
         'image',
-        'title_ru',
-        'title_uz',
-        'title_en',
         'sub_content_ru',
         'sub_content_uz',
-        'sub_content_en',
         'content_ru',
-        'content_en',
         'content_uz',
         'meta_title_ru',
         'meta_title_uz',
-        'meta_title_en',
         'meta_description_ru',
         'meta_description_uz',
-        'meta_description_en',
     ];
 
 

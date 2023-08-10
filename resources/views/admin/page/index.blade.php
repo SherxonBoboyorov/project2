@@ -1,7 +1,8 @@
+
 @extends('layouts.admin')
 
 @section('content')
-    <div class="page-content-wrapper">
+    <div class="page-content-wrapper ">
 
         <div class="container-fluid">
 
@@ -32,23 +33,36 @@
                         <div>
                         <thead>
                         <tr>
-                            <th>Title [Uzbek]</th>
-                            <th>Title [Russian]</th>
-                            <th>Title [English]</th>
-                            <th colspan="2" style="width: 2%;">Actions</th>
+                            <th style="width: 2%;">#</th>
+                            <th>Image</th>
+                            <th>Sub Content [Uzbek]</th>
+                            <th>Sub Content [Russian]</th>
+                            <th colspan="2" style="width: 2%;">Action</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach ($pages as $page)
                             <tr>
-                                <td>{{ $page->title_uz }}</td>
-                                <td>{{ $page->title_ru }}</td>
-                                <td>{{ $page->title_en }}</td>
+                                <td>{{ $page->id }}</td>
+                                <td>
+                                    <img src="{{ asset($page->image) }}" alt="" width="35" height="35">
+                                </td>
+                                <td class="table_cart_list">{!! $page->sub_content_uz !!}</td>
+                                <td class="table_cart_list">{!! $page->sub_content_ru !!}</td>
                                 <td>
                                     <a href="{{ route('page.edit', $page->id) }}" class="btn btn-primary btn-icon">
                                         <i class="fa fa-edit">Edit</i>
                                     </a>
                                 </td>
+                                {{-- <td>
+                                    <form action="{{ route('page.destroy', $page->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-icon">
+                                            <i class="fa fa-trash">Delete</i>
+                                        </button>
+                                    </form>
+                                </td> --}}
                             </tr>
                         @endforeach
                         </tbody>
@@ -61,6 +75,22 @@
         </div>
     </div>
 
-  
+    <style>
+        .table_cart_list p+p {
+            max-height: 72px;
+            -webkit-line-clamp: 3;
+            position: relative;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+        }
+
+        .table_cart_list img{
+           display: none;
+        }
+    </style>
 
 @endsection
+
