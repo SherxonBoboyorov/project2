@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\HouseImageController;
 use App\Http\Controllers\Admin\IntegrationController;
 use App\Http\Controllers\Admin\NumberController;
+use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\PromotionalController;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
 
@@ -34,8 +35,9 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'faq' => FaqController::class,
         'integration' => IntegrationController::class,
         'number' => NumberController::class,
-        'promotional' => PromotionalController::class
-        ]);
+        'promotional' => PromotionalController::class,
+        'partner' => PartnerController::class
+    ]);
 });
 
 
