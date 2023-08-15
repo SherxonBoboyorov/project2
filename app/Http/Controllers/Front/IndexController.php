@@ -3,14 +3,31 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Article;
+use App\Models\Faq;
 use App\Models\Feedback;
+use App\Models\HouseImage;
+use App\Models\Page;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
     public function homepage()
     {
-        //
+        $sliders = Slider::orderBy('created_at', 'DESC')->get();
+        $pages = Page::all();
+        $houseimages = HouseImage::orderBy('created_at', 'DESC')->get();
+        $articles = Article::orderBy('created_at', 'DESC')->get();
+        $faqs = Faq::orderBy('created_at', 'DESC')->get();
+
+        return view('front.index', compact(
+          'sliders',
+          'pages',
+          'houseimages',
+          'articles',
+          'faqs'
+        ));
     }
 
     public function uploadVideo(Request $request)
