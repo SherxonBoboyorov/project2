@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\IntegrationController;
 use App\Http\Controllers\Admin\NumberController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\PromotionalController;
+use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\IndexController;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
 
@@ -47,7 +48,8 @@ Route::group(
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){ 
-       Route::get('/', [IndexController::class, 'homepage'])->name('/');
+         Route::get('/', [IndexController::class, 'homepage'])->name('/');
+         Route::get('about', [AboutController::class, 'about'])->name('about');
     });
 
 

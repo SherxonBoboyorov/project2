@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <link href="{{ asset('front/src/css/output.css') }}" rel="stylesheet" />
     <link href="{{ asset('front/src/css/custom.css') }}" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js'"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Uy Bozorim</title>
   </head>
   <body>
@@ -19,17 +19,17 @@
       <!-- Header start -->
       <div class="header-sticy mx-auto bg-white w-full fixed z-50 top-0">
         <div class="header shadow-md relative mx-auto px-2">
-          <div
-            class="navbar mx-auto max-w-screen-xl flex justify-between items-center py-3"
-          >
+          <div class="navbar mx-auto max-w-screen-xl flex justify-between items-center py-3" >
             <!-- Navbar toogler start -->
             <div id="navbar-toggler" class="navbar-toggler block lg:hidden">
-              <img class="[@media(min-width:450px)]:w-[25px] [@media(min-width:450px)]:h-[25px] [@media(max-width:450px)]:w-[20px] [@media(max-width:450px)]:h-[20px]" src="https://img.icons8.com/ios-filled/50/000000/menu--v6.png" alt="menu--v6" />
+              <img class="[@media(min-width:450px)]:w-[25px] [@media(min-width:450px)]:h-[25px] [@media(max-width:450px)]:w-[20px] [@media(max-width:450px)]:h-[20px]" src="https://img.icons8.com/ios-filled/50/000000/menu--v6.png" alt="menu--v6"/>
             </div>
             <!-- Navbar toogler end -->
 
             <!-- Logo start -->
-            <div class="ml-3 [@media(min-width:450px)]:w-[200px] [@media(max-width:450px)]:w-[140px]">
+            <div
+              class="ml-3 [@media(min-width:450px)]:w-[200px] [@media(max-width:450px)]:w-[140px]"
+            >
               <a href="{{ route('/') }}">
                 <img src="{{ asset('front/src/images/logo.jpg') }}" alt="logo" />
               </a>
@@ -37,9 +37,11 @@
             <!-- Logo end -->
 
             <!-- Navbar-links start -->
-            <div class="links w-[65%] hidden lg:flex justify-evenly items-center">
+            <div
+              class="links w-[65%] hidden lg:flex justify-evenly items-center"
+            >
               <div class="link">
-                <a href="#" class="nav-link-styles"> О нас </a>
+                <a href="{{ route('about') }}" class="nav-link-styles"> О нас </a>
               </div>
               <div class="link">
                 <a href="#branches" class="nav-link-styles"> Филиалы </a>
@@ -55,7 +57,9 @@
 
             <!-- Social media and languages start -->
             <div class="lg:w-[220px] languages-content flex justify-between">
-              <div class="sm-icons hidden lg:flex justify-between items-center w-[110px]" >
+              <div
+                class="sm-icons hidden lg:flex justify-between items-center w-[110px]"
+              >
                 <a href="#" class="sm-icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +139,7 @@
               <!-- Navbar links start -->
               <div class="links w-full">
                 <div class="link">
-                  <a href="#" class="nav-link-styles"> О нас </a>
+                  <a href="{{ route('about') }}" class="nav-link-styles"> О нас </a>
                 </div>
                 <div class="link my-3">
                   <a href="#branches" class="nav-link-styles"> Филиалы </a>
@@ -199,7 +203,9 @@
                     >
                       <rect width="30" height="30" rx="15" fill="#0D2668" />
                       <path
-                        d="M21.75 9.71717C21.7134 10.0466 21.6402 10.4127 21.567 10.7422C20.9446 13.6708 20.3223 16.5994 19.7 19.528C19.6634 19.711 19.6268 19.8574 19.5535 20.0039C19.4071 20.2601 19.1875 20.3333 18.8946 20.2601C18.7116 20.2235 18.5651 20.1503 18.4187 20.0405C17.4669 19.3449 16.5517 18.6494 15.5999 17.9539C15.4901 17.8806 15.4169 17.8806 15.3071 17.9905C14.8312 18.4298 14.3919 18.9057 13.916 19.3449C13.733 19.528 13.5499 19.6378 13.2937 19.6012C13.1106 19.6012 13.0008 19.528 12.9642 19.3449C12.6713 18.4298 12.3785 17.5512 12.0856 16.636C11.9758 16.3431 11.866 16.0137 11.7928 15.7208C11.7561 15.611 11.7195 15.5378 11.5731 15.5012C10.6579 15.2083 9.74273 14.9154 8.82755 14.6592C8.71772 14.6226 8.57129 14.586 8.46147 14.5128C8.20522 14.3663 8.16861 14.1467 8.42486 13.927C8.57129 13.7806 8.75433 13.7074 8.97398 13.6342C10.2186 13.1583 11.4633 12.6824 12.7079 12.2065C15.4169 11.1815 18.0892 10.1199 20.7982 9.09484C20.8348 9.09484 20.8348 9.09484 20.8714 9.05823C21.3839 8.8752 21.75 9.13145 21.75 9.71717ZM13.3303 18.7592C13.3669 18.7226 13.3669 18.686 13.3669 18.686C13.4401 18.0271 13.4767 17.3681 13.5499 16.7092C13.5499 16.5628 13.6231 16.4163 13.733 16.3065C15.4901 14.7324 17.2473 13.1583 19.0044 11.5842C19.1143 11.4743 19.2241 11.4011 19.3339 11.2913C19.3705 11.2547 19.4437 11.2181 19.4071 11.1449C19.3705 11.0716 19.2973 11.0716 19.2241 11.0716C19.0777 11.0716 18.9678 11.1449 18.858 11.2181C16.6982 12.5726 14.5383 13.927 12.3785 15.3181C12.2687 15.3913 12.232 15.4645 12.2687 15.611C12.5249 16.4163 12.7812 17.2217 13.074 18.0271C13.1472 18.2101 13.2204 18.4664 13.3303 18.7592Z" fill="white" />
+                        d="M21.75 9.71717C21.7134 10.0466 21.6402 10.4127 21.567 10.7422C20.9446 13.6708 20.3223 16.5994 19.7 19.528C19.6634 19.711 19.6268 19.8574 19.5535 20.0039C19.4071 20.2601 19.1875 20.3333 18.8946 20.2601C18.7116 20.2235 18.5651 20.1503 18.4187 20.0405C17.4669 19.3449 16.5517 18.6494 15.5999 17.9539C15.4901 17.8806 15.4169 17.8806 15.3071 17.9905C14.8312 18.4298 14.3919 18.9057 13.916 19.3449C13.733 19.528 13.5499 19.6378 13.2937 19.6012C13.1106 19.6012 13.0008 19.528 12.9642 19.3449C12.6713 18.4298 12.3785 17.5512 12.0856 16.636C11.9758 16.3431 11.866 16.0137 11.7928 15.7208C11.7561 15.611 11.7195 15.5378 11.5731 15.5012C10.6579 15.2083 9.74273 14.9154 8.82755 14.6592C8.71772 14.6226 8.57129 14.586 8.46147 14.5128C8.20522 14.3663 8.16861 14.1467 8.42486 13.927C8.57129 13.7806 8.75433 13.7074 8.97398 13.6342C10.2186 13.1583 11.4633 12.6824 12.7079 12.2065C15.4169 11.1815 18.0892 10.1199 20.7982 9.09484C20.8348 9.09484 20.8348 9.09484 20.8714 9.05823C21.3839 8.8752 21.75 9.13145 21.75 9.71717ZM13.3303 18.7592C13.3669 18.7226 13.3669 18.686 13.3669 18.686C13.4401 18.0271 13.4767 17.3681 13.5499 16.7092C13.5499 16.5628 13.6231 16.4163 13.733 16.3065C15.4901 14.7324 17.2473 13.1583 19.0044 11.5842C19.1143 11.4743 19.2241 11.4011 19.3339 11.2913C19.3705 11.2547 19.4437 11.2181 19.4071 11.1449C19.3705 11.0716 19.2973 11.0716 19.2241 11.0716C19.0777 11.0716 18.9678 11.1449 18.858 11.2181C16.6982 12.5726 14.5383 13.927 12.3785 15.3181C12.2687 15.3913 12.232 15.4645 12.2687 15.611C12.5249 16.4163 12.7812 17.2217 13.074 18.0271C13.1472 18.2101 13.2204 18.4664 13.3303 18.7592Z"
+                        fill="white"
+                      />
                     </svg>
                   </a>
                 </div>
@@ -219,53 +225,61 @@
 
     <!-- Footer start -->
     <div class="footer w-full py-5 bg-[#0D1C45] px-3 mx-auto">
-        <div
+      <div
         class="text-content max-w-screen-xl mx-auto flex flex-wrap justify-between items-center"
-        >
+      >
         <div
-            class="text-[14px] [@media(min-width:576px)]:w-fit [@media(max-width:576px)]:w-full [@media(max-width:576px)]:text-center [@media(max-width:576px)]:mb-2">
-            <a href="./index.html" class="text-[white]">“Uy Bozorim” Все права защищены</a>
+          class="text-[14px] [@media(min-width:576px)]:w-fit [@media(max-width:576px)]:w-full [@media(max-width:576px)]:text-center [@media(max-width:576px)]:mb-2"
+        >
+          <a class="text-[white]"
+            >“Uy Bozorim” Все права защищены</a
+          >
         </div>
         <div
-            class="links [@media(max-width:1000px)]:hidden [@media(min-width:1000px)]:flex w-fit justify-between items-center"
+          class="links [@media(max-width:1000px)]:hidden [@media(min-width:1000px)]:flex w-fit justify-between items-center"
         >
-            <a
-            href="./about.html"
+          <a
+            href="{{ route('about') }}"
             class="link mx-5 font-[500] text-[white] text-[16px]"
-            >
+          >
             О нас
-            </a>
-            <a
+          </a>
+          <a
             href="#branches"
             class="link mx-5 font-[500] text-[white] text-[16px]"
-            >
+          >
             Филиалы
-            </a>
-            <a
+          </a>
+          <a
             href="#partners"
             class="link mx-5 font-[500] text-[white] text-[16px]"
-            >
+          >
             Партнеры
-            </a>
-            <a href="#contacts" class="link mx-5 font-[500] text-[white] text-[16px]" >
+          </a>
+          <a
+            href="#contacts"
+            class="link mx-5 font-[500] text-[white] text-[16px]"
+          >
             Контакты
-            </a>
+          </a>
         </div>
-        <div class="text-[14px] [@media(min-width:576px)]:w-fit [@media(max-width:576px)]:w-full [@media(max-width:576px)]:text-center">
-            <a class="text-[white]" href="https://sos.uz">
+        <div
+          class="text-[14px] [@media(min-width:576px)]:w-fit [@media(max-width:576px)]:w-full [@media(max-width:576px)]:text-center"
+        >
+          <a class="text-[white]" href="https://sos.uz">
             © Copyright 2023 - SOS Group
-            </a>
+          </a>
         </div>
-        </div>
+      </div>
     </div>
     <!-- Footer end -->
-    </div>
-    <!-- Contact end -->
-    </div>
+  </div>
+  <!-- Contact end -->
+</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <script type="module" src="{{ asset('front/src/js/swiper.js') }}"></script>
-    <script src="{{ asset('front/src/js/app.js') }}"></script>
-    </body>
-    </html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script type="module" src="{{ asset('front/src/js/swiper.js') }}"></script>
+<script src="{{ asset('front/src/js/app.js') }}"></script>
+</body>
+</html>

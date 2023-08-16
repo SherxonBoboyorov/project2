@@ -4,10 +4,15 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use App\Models\Event;
 use App\Models\Faq;
 use App\Models\Feedback;
 use App\Models\HouseImage;
+use App\Models\Integration;
+use App\Models\Number;
 use App\Models\Page;
+use App\Models\Partner;
+use App\Models\Promotional;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 
@@ -19,14 +24,24 @@ class IndexController extends Controller
         $pages = Page::all();
         $houseimages = HouseImage::orderBy('created_at', 'DESC')->get();
         $articles = Article::orderBy('created_at', 'DESC')->get();
+        $events = Event::orderBy('created_at', 'DESC')->get();
         $faqs = Faq::orderBy('created_at', 'DESC')->get();
+        $partners = Partner::orderBy('created_at', 'DESC')->get();
+        $numbers = Number::orderBy('created_at', 'DESC')->get();
+        $integrations = Integration::orderBy('created_at', 'DESC')->get();
+        $promotionals = Promotional::orderBy('created_at', 'DESC')->get();
 
         return view('front.index', compact(
           'sliders',
           'pages',
           'houseimages',
           'articles',
-          'faqs'
+          'events',
+          'faqs',
+          'partners',
+          'numbers',
+          'integrations',
+          'promotionals'
         ));
     }
 
