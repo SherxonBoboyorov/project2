@@ -32,16 +32,16 @@ class IndexController extends Controller
         $promotionals = Promotional::orderBy('created_at', 'DESC')->get();
 
         return view('front.index', compact(
-          'sliders',
-          'pages',
-          'houseimages',
-          'articles',
-          'events',
-          'faqs',
-          'partners',
-          'numbers',
-          'integrations',
-          'promotionals'
+            'sliders',
+            'pages',
+            'houseimages',
+            'articles',
+            'events',
+            'faqs',
+            'partners',
+            'numbers',
+            'integrations',
+            'promotionals'
         ));
     }
 
