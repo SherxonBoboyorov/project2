@@ -2,393 +2,353 @@
 
 @section('content')
 
-      <!-- Bac img Container start -->
-      <div class="back-img relative w-full [@media(min-width:900px)]:h-[600px] [@media(min-width:768px)]:h-[500px] [@media(min-width:576px)]:h-[400px] [@media(max-width:576px)]:h-[250px] mt-[60px] [@media(max-width:449px)]:mt-[40px]">
-        <!-- text Content start  -->
-        @foreach($sliders as $slider)
-          
-        <div class="text-content max-w-[1000px] px-5 w-full z-10 absolute text-white top-[45%] left-[50%] -translate-x-[50%] -translate-y-[50%]" >
+<!-- Bac img Container start -->
+<div class="back-img relative w-full [@media(min-width:900px)]:h-[600px] [@media(min-width:768px)]:h-[500px] [@media(min-width:576px)]:h-[400px] [@media(max-width:576px)]:h-[250px] mt-[60px] [@media(max-width:449px)]:mt-[40px]">
+  <!-- text Content start  -->
+  @foreach($sliders as $slider)
+    
+  <div class="text-content max-w-[1000px] px-5 w-full z-10 absolute text-white top-[45%] left-[50%] -translate-x-[50%] -translate-y-[50%]" >
+    <!-- Title start -->
+    <div class="title text-center text-inherit font-[600] [@media(min-width:850px)]:text-[40px] [@media(min-width:576px)]:text-[30px] [@media(min-width:450px)]:text-[25px] [@media(max-width:450px)]:text-[21px]" >
+      {{ $slider->{'title_' . app()->getLocale()} }}
+    </div>
+    <!-- Title end -->
+
+    <!-- Description start -->
+    <div
+      class="mt-3 description text-inherit [@media(min-width:850px)]:text-[20px] [@media(min-width:576px)]:text-[17px] [@media(max-width:576px)]:text-[14px] font-[400] text-center" >
+          {{ $slider->{'description_' . app()->getLocale()} }}
+    </div>
+    <!-- Description end -->
+  </div>
+  <!-- text Content end  -->
+
+  <!-- Back img start -->
+  <img src="{{ asset($slider->image) }}" class="w-full h-full object-cover" alt="bac-img"/>
+  <!-- Back img end -->
+
+  <!-- Arrow down start -->
+  <div class="arrow-down w-fit [@media(max-width:576px)]:scale-[0.5] [@media(min-width:576px)]:scale-[0.7] [@media(min-width:900px)]:scale-[1] absolute bottom-[5%] left-[50%] z-10 -translate-x-[50%] -translate-y-[50%]">
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="18" viewBox="0 0 48 26" fill="none" >
+      <path d="M46 2L24 24L2 2" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  @endforeach
+
+  <!-- Arrow down end -->
+</div>
+<!-- Bac img Container end -->
+
+<!-- About we some start -->
+<div class="what-we-do h-fit px-5 max-w-screen-xl mx-auto [@media(max-width:850px)]:my-10 [@media(min-width:850px)]:my-20" >
+  @foreach ($pages as $page)
+
+  <div class="flex justify-between items-center flex-wrap [@media(min-width:850px)]:h-[500px] [@media(max-width:850px)]:h-fit">
+    <!-- text content side start -->
+    <div class="col [@media(max-width:850px)]:mb-2 pb-3 [@media(min-width:850px)]:w-[48%] [@media(max-width:850px)]:w-full h-fit flex justify-start items-center" >
+      <div class="text-content">
+        <!-- Title start -->
+        <div class="title-content w-fit">
+          <div class="title text-[#0D2668] text-[40px] -mt-3 font-[600] max-sm:text-[32px]">
+            О компании
+          </div>
+          <hr class="border-none bg-[#0D2668] w-1/3 h-[2px]" />
+        </div>
+        <!-- Title end -->
+
+        <!-- Description start -->
+        <div class="mt-5 mb-7 decription max-h-[352px] max-sm:max-h-[340px] text-[18px] max-sm:text-[15px] text-[#696969] overflow-hidden" >
+             {{ $page->{'sub_content_' . app()->getLocale()} }}
+        </div>
+        <!-- Description end -->
+
+        <!-- To About page button start -->
+        <a href="{{ route('about') }}" class="uppercase bg-[#0D2668] px-5 py-3 text-[white] text-[18px] max-sm:text-[15px] font-[500]" >
+          Узнать больше
+        </a>
+        <!-- To About page button send -->
+      </div>
+    </div>
+    <!-- text content side end -->
+
+    <!-- img content side start -->
+    <div class="col overflow-hidden [@media(min-width:850px)]:w-[48%] [@media(max-width:850px)]:w-full [@media(min-width:850px)]:h-full [@media(min-width:768px)]:h-[500px] [@media(min-width:576px)]:h-[400px] [@media(max-width:576px)]:h-[300px]" >
+      <img src="{{ asset($page->image) }}" alt="" class="w-full h-full object-cover" />
+    </div>
+    <!-- img content side end -->
+  </div>
+  @endforeach
+
+</div>
+<!-- About we some end -->
+
+<!-- Slider Room start -->
+<div class="slider-rooms mb-10">
+  <div class="swiper [@media(min-width:1000px)]:h-[600px] [@media(min-width:850px)]:h-[500px] [@media(min-width:650px)]:h-[400px] [@media(max-width:650px)]:h-[350px] mySwiper w-full">
+    <!-- Slide wrapper start -->
+    <div class="swiper-wrapper h-full [&>.swiper-slide.swiper-slide-active]:opacity-100">
+      <!-- Slides start -->
+      @foreach ($houseimages as $houseimage)
+
+      <div class="swiper-slide transition-all duration-[0.25s] ease-linear opacity-50 h-[90%] overflow-hidden">
+        <!-- Slide Img start -->
+        <img src="{{ asset($houseimage->image) }}"class="transition-all duration-[0.2s] ease-linear w-full h-full object-cover hover:scale-[1.05]" alt="" />
+        <!-- Slide Img end -->
+      </div>
+      <!-- Slides end -->
+      @endforeach
+    </div>
+    <!-- Slide wrapper end -->
+
+    <!-- Navigation start -->
+    <div class="swiper-button-next [@media(max-width:1000px)]:w-[25px] [@media(max-width:1000px)]:h-[25px] [@media(min-width:1000px)]:w-[30px] [@media(min-width:1000px)]:h-[30px] rounded-full bg-[#edeef1] min-[2401px]:right-[24.3vw] min-[2201px]:right-[23.7vw] max-[2200px]:right-[23.5vw] max-[1960px]:right-[23.5vw] max-[1700px]:right-[23.1vw] max-[1450px]:right-[22.8vw] max-[1290px]:right-[22.5vw] max-[850px]:right-[5vw]" ></div>
+    <div class="swiper-button-prev [@media(max-width:1000px)]:w-[25px] [@media(max-width:1000px)]:h-[25px] [@media(min-width:1000px)]:w-[30px] [@media(min-width:1000px)]:h-[30px] rounded-full bg-[#edeef1] min-[2401px]:left-[24.3vw] min-[2201px]:left-[23.7vw] max-[2200px]:left-[23.5vw] max-[1960px]:left-[23.5vw] max-[1700px]:left-[23.1vw] max-[1450px]:left-[22.8vw] max-[1290px]:left-[22.5vw] max-[850px]:left-[5vw]" ></div>
+    <!-- Navigation end-->
+
+    <!-- Pagination start -->
+    <div class="swiper-pagination"></div>
+    <!-- Pagination end -->
+  </div>
+</div>
+<!-- Slider Room end -->
+
+<div class="bg-[#F3F4F7] w-full mx-auto">
+  <!-- Our Branches start -->
+  <div id="branches" class="our-branches w-full mx-auto h-fit mt-16 py-14 px-5">
+    @foreach($articles as $article)
+      
+    <!-- Text content start -->
+    <div class="text-content px-3 mx-auto max-w-[1000px] overflow-hidden">
+      <!-- Title start -->
+      <div class="title text-center text-[#0D2668] [@media(min-width:768px)]:text-[40px] [@media(max-width:768px)]:text-[30px] [@media(max-width:576px)]:text-[24px] font-[600]" >
+        Наши филиалы
+      </div>
+      <!-- Title end -->
+
+      <!-- Description start -->
+      <div class="description text-center [@media(min-width:576px)]:mt-3 [@media(max-width:576px)]:mt-1 text-[#696969] [@media(min-width:768px)]:text-[20px] [@media(max-width:768px)]:text-[18px] [@media(max-width:576px)]:text-[14px]" >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </div>
+      <!-- Description end -->
+    </div>
+    <!-- Text content end -->
+
+    <!-- Branches container start -->
+    <div class="branches-container max-w-screen-xl mx-auto my-12 grid">
+      <!-- Brach cards start -->
+      <div class="box [@media(min-width:900px)]:h-[270px] [@media(max-width:900px)]:h-[220px] bg-white text p-4 flex items-center">
+        <!-- Text Content start -->
+        <div class="text-content w-full overflow-hidden">
           <!-- Title start -->
-          <div class="title text-center text-inherit font-[600] [@media(min-width:850px)]:text-[40px] [@media(min-width:576px)]:text-[30px] [@media(min-width:450px)]:text-[25px] [@media(max-width:450px)]:text-[21px]" >
-            {{ $slider->{'title_' . app()->getLocale()} }}
+          <div class="title [@media(min-width:900px)]:text-[22px] [@media(max-width:900px)]:text-[16px] text-[#0D2668] font-[600]" >
+            {{ $article->{'title_' . app()->getLocale()} }}
           </div>
           <!-- Title end -->
 
           <!-- Description start -->
-          <div
-            class="mt-3 description text-inherit [@media(min-width:850px)]:text-[20px] [@media(min-width:576px)]:text-[17px] [@media(max-width:576px)]:text-[14px] font-[400] text-center" >
-                {{ $slider->{'description_' . app()->getLocale()} }}
+          <div class="description [@media(min-width:900px)]:max-h-[150px] [@media(max-width:900px)]:max-h-[126px] mt-2 overflow-hidden text-[#696969] [@media(min-width:900px)]:text-[16px] [@media(max-width:900px)]:text-[12px]" >
+            {!! $article->{'content_' . app()->getLocale()} !!}
           </div>
           <!-- Description end -->
         </div>
-        <!-- text Content end  -->
-
-        <!-- Back img start -->
-        <img src="{{ asset($slider->image) }}" class="w-full h-full object-cover" alt="bac-img"/>
-        <!-- Back img end -->
-
-        <!-- Arrow down start -->
-        <div class="arrow-down w-fit [@media(max-width:576px)]:scale-[0.5] [@media(min-width:576px)]:scale-[0.7] [@media(min-width:900px)]:scale-[1] absolute bottom-[5%] left-[50%] z-10 -translate-x-[50%] -translate-y-[50%]">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="18" viewBox="0 0 48 26" fill="none" >
-            <path d="M46 2L24 24L2 2" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        @endforeach
-
-        <!-- Arrow down end -->
+        <!-- Text Content end -->
       </div>
-      <!-- Bac img Container end -->
-
-      <!-- About we some start -->
-      <div class="what-we-do h-fit px-5 max-w-screen-xl mx-auto [@media(max-width:850px)]:my-10 [@media(min-width:850px)]:my-20" >
-        @foreach ($pages as $page)
-
-        <div class="flex justify-between items-center flex-wrap [@media(min-width:850px)]:h-[500px] [@media(max-width:850px)]:h-fit">
-          <!-- text content side start -->
-          <div class="col [@media(max-width:850px)]:mb-2 pb-3 [@media(min-width:850px)]:w-[48%] [@media(max-width:850px)]:w-full h-fit flex justify-start items-center" >
-            <div class="text-content">
-              <!-- Title start -->
-              <div class="title-content w-fit">
-                <div class="title text-[#0D2668] text-[40px] -mt-3 font-[600] max-sm:text-[32px]">
-                  О компании
-                </div>
-                <hr class="border-none bg-[#0D2668] w-1/3 h-[2px]" />
-              </div>
-              <!-- Title end -->
-
-              <!-- Description start -->
-              <div class="mt-5 mb-7 decription max-h-[352px] max-sm:max-h-[340px] text-[18px] max-sm:text-[15px] text-[#696969] overflow-hidden" >
-                   {{ $page->{'sub_content_' . app()->getLocale()} }}
-              </div>
-              <!-- Description end -->
-
-              <!-- To About page button start -->
-              <a href="{{ route('about') }}" class="uppercase bg-[#0D2668] px-5 py-3 text-[white] text-[18px] max-sm:text-[15px] font-[500]" >
-                Узнать больше
-              </a>
-              <!-- To About page button send -->
-            </div>
-          </div>
-          <!-- text content side end -->
-
-          <!-- img content side start -->
-          <div class="col overflow-hidden [@media(min-width:850px)]:w-[48%] [@media(max-width:850px)]:w-full [@media(min-width:850px)]:h-full [@media(min-width:768px)]:h-[500px] [@media(min-width:576px)]:h-[400px] [@media(max-width:576px)]:h-[300px]" >
-            <img src="{{ asset($page->image) }}" alt="" class="w-full h-full object-cover" />
-          </div>
-          <!-- img content side end -->
+      <div class="box [@media(min-width:900px)]:h-[270px] [@media(max-width:900px)]:h-[220px] overflow-hidden relative img">
+        <div class="corner-wrapper [@media(min-width:900px)]:w-[50px] [@media(min-width:900px)]:h-[50px] [@media(max-width:900px)]:w-[40px] [@media(max-width:900px)]:h-[40px] absolute top-[50%] -translate-y-[50%]" >
+          <div class="corner w-full h-full rotate-45 bg-white"></div>
         </div>
-        @endforeach
 
+        <!-- Img start -->
+        <img src="{{ asset($article->image) }}" class="w-full h-full" alt=""/>
+        <!-- Img end -->
       </div>
-      <!-- About we some end -->
+ 
+      <!-- Brach cards end -->
+       @endforeach
+    </div>
+    <!-- Branches container end -->
+  </div>
+  <!-- Out Branches end -->
 
-      <!-- Slider Room start -->
-      <div class="slider-rooms mb-10">
-        <div class="swiper [@media(min-width:1000px)]:h-[600px] [@media(min-width:850px)]:h-[500px] [@media(min-width:650px)]:h-[400px] [@media(max-width:650px)]:h-[350px] mySwiper w-full">
-          <!-- Slide wrapper start -->
-          <div class="swiper-wrapper h-full [&>.swiper-slide.swiper-slide-active]:opacity-100">
-            <!-- Slides start -->
-            @foreach ($houseimages as $houseimage)
-
-            <div class="swiper-slide transition-all duration-[0.25s] ease-linear opacity-50 h-[90%] overflow-hidden">
-              <!-- Slide Img start -->
-              <img src="{{ asset($houseimage->image) }}"class="transition-all duration-[0.2s] ease-linear w-full h-full object-cover hover:scale-[1.05]" alt="" />
-              <!-- Slide Img end -->
-            </div>
-            <!-- Slides end -->
-            @endforeach
-          </div>
-          <!-- Slide wrapper end -->
-
-          <!-- Navigation start -->
-          <div class="swiper-button-next [@media(max-width:1000px)]:w-[25px] [@media(max-width:1000px)]:h-[25px] [@media(min-width:1000px)]:w-[30px] [@media(min-width:1000px)]:h-[30px] rounded-full bg-[#edeef1] min-[2401px]:right-[24.3vw] min-[2201px]:right-[23.7vw] max-[2200px]:right-[23.5vw] max-[1960px]:right-[23.5vw] max-[1700px]:right-[23.1vw] max-[1450px]:right-[22.8vw] max-[1290px]:right-[22.5vw] max-[850px]:right-[5vw]" ></div>
-          <div class="swiper-button-prev [@media(max-width:1000px)]:w-[25px] [@media(max-width:1000px)]:h-[25px] [@media(min-width:1000px)]:w-[30px] [@media(min-width:1000px)]:h-[30px] rounded-full bg-[#edeef1] min-[2401px]:left-[24.3vw] min-[2201px]:left-[23.7vw] max-[2200px]:left-[23.5vw] max-[1960px]:left-[23.5vw] max-[1700px]:left-[23.1vw] max-[1450px]:left-[22.8vw] max-[1290px]:left-[22.5vw] max-[850px]:left-[5vw]" ></div>
-          <!-- Navigation end-->
-
-          <!-- Pagination start -->
-          <div class="swiper-pagination"></div>
-          <!-- Pagination end -->
+  <!-- Form start -->
+  <div class="form w-full h-[450px] mx-auto relative bg-no-repeat bg-center bg-cover flex justify-center items-center" style="background-image: url('{{ asset('front/src/images/form-img.jpg') }}')">
+    <div class="max-w-screen-md h-fit mx-auto">
+      <!-- Text content start -->
+      <div class="text-content pl-3 pr-4 mx-auto max-w-[1000px] overflow-hidden" >
+        <!-- Title start -->
+        <div class="title text-center text-[white] [@media(min-width:576px)]:text-[35px] [@media(max-width:576px)]:text-[26px] font-[600]" >
+          Обратная связь
         </div>
+        <!-- Title end -->
+
+        <!-- Description start -->
+        <div class="description text-center [@media(min-width:576px)]:mt-3 [@media(max-width:576px)]:mt-1 text-[white] [@media(min-width:768px)]:text-[20px] [@media(max-width:768px)]:text-[17px]" >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        </div>
+        <!-- Description end -->
       </div>
-      <!-- Slider Room end -->
+      <!-- Text content end -->
 
-      <div class="bg-[#F3F4F7] w-full mx-auto">
-        <!-- Our Branches start -->
-        <div id="branches" class="our-branches w-full mx-auto h-fit mt-16 py-14 px-5">
-          @foreach($articles as $article)
-            
-          <!-- Text content start -->
-          <div class="text-content px-3 mx-auto max-w-[1000px] overflow-hidden">
-            <!-- Title start -->
-            <div class="title text-center text-[#0D2668] [@media(min-width:768px)]:text-[40px] [@media(max-width:768px)]:text-[30px] [@media(max-width:576px)]:text-[24px] font-[600]" >
-              Наши филиалы
-            </div>
-            <!-- Title end -->
-
-            <!-- Description start -->
-            <div class="description text-center [@media(min-width:576px)]:mt-3 [@media(max-width:576px)]:mt-1 text-[#696969] [@media(min-width:768px)]:text-[20px] [@media(max-width:768px)]:text-[18px] [@media(max-width:576px)]:text-[14px]" >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
-            </div>
-            <!-- Description end -->
+      <!-- Form Content start -->
+      <div class="form-content mx-auto px-2 max-w-[500px]">
+        <form action="" method="get" class="my-3">
+          <div class="input-content my-5">
+            <input id="userName-first" type="text" class="w-full [@media(min-width:576px)]:h-[40px] [@media(max-width:576px)]:h-[35px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-white" placeholder="Имя"/>
+            <input id="userNumber-first" type="number" class="w-full [@media(min-width:576px)]:h-[40px] [@media(max-width:576px)]:h-[35px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-white" placeholder="Телефон" />
+            <textarea id="userComment-first" rows="3" class="w-full px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-white" placeholder="Комментарий"></textarea>
           </div>
-          <!-- Text content end -->
-
-          <!-- Branches container start -->
-          <div class="branches-container max-w-screen-xl mx-auto my-12 grid">
-            <!-- Brach cards start -->
-            <div class="box [@media(min-width:900px)]:h-[270px] [@media(max-width:900px)]:h-[220px] bg-white text p-4 flex items-center">
-              <!-- Text Content start -->
-              <div class="text-content w-full overflow-hidden">
-                <!-- Title start -->
-                <div class="title [@media(min-width:900px)]:text-[22px] [@media(max-width:900px)]:text-[16px] text-[#0D2668] font-[600]" >
-                  {{ $article->{'title_' . app()->getLocale()} }}
-                </div>
-                <!-- Title end -->
-
-                <!-- Description start -->
-                <div class="description [@media(min-width:900px)]:max-h-[150px] [@media(max-width:900px)]:max-h-[126px] mt-2 overflow-hidden text-[#696969] [@media(min-width:900px)]:text-[16px] [@media(max-width:900px)]:text-[12px]" >
-                  {!! $article->{'content_' . app()->getLocale()} !!}
-                </div>
-                <!-- Description end -->
-              </div>
-              <!-- Text Content end -->
-            </div>
-            <div class="box [@media(min-width:900px)]:h-[270px] [@media(max-width:900px)]:h-[220px] overflow-hidden relative img">
-              <div class="corner-wrapper [@media(min-width:900px)]:w-[50px] [@media(min-width:900px)]:h-[50px] [@media(max-width:900px)]:w-[40px] [@media(max-width:900px)]:h-[40px] absolute top-[50%] -translate-y-[50%]" >
-                <div class="corner w-full h-full rotate-45 bg-white"></div>
-              </div>
-
-              <!-- Img start -->
-              <img src="{{ asset($article->image) }}" class="w-full h-full" alt=""/>
-              <!-- Img end -->
-            </div>
-       
-            <!-- Brach cards end -->
-             @endforeach
-          </div>
-          <!-- Branches container end -->
-        </div>
-        <!-- Out Branches end -->
-
-        <!-- Form start -->
-        <div class="form w-full h-[450px] mx-auto relative bg-no-repeat bg-center bg-cover flex justify-center items-center" style="background-image: url('./src/images/form-img.jpg')">
-          <div class="max-w-screen-md h-fit mx-auto">
-            <!-- Text content start -->
-            <div class="text-content pl-3 pr-4 mx-auto max-w-[1000px] overflow-hidden" >
-              <!-- Title start -->
-              <div class="title text-center text-[white] [@media(min-width:576px)]:text-[35px] [@media(max-width:576px)]:text-[26px] font-[600]" >
-                Обратная связь
-              </div>
-              <!-- Title end -->
-
-              <!-- Description start -->
-              <div class="description text-center [@media(min-width:576px)]:mt-3 [@media(max-width:576px)]:mt-1 text-[white] [@media(min-width:768px)]:text-[20px] [@media(max-width:768px)]:text-[17px]" >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-              </div>
-              <!-- Description end -->
-            </div>
-            <!-- Text content end -->
-
-            <!-- Form Content start -->
-            <div class="form-content mx-auto px-2 max-w-[500px]">
-              <form action="" method="get" class="my-3">
-                <div class="input-content my-5">
-                  <input id="userName-first" type="text" class="w-full [@media(min-width:576px)]:h-[40px] [@media(max-width:576px)]:h-[35px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-white" placeholder="Имя"/>
-                  <input id="userNumber-first" type="number" class="w-full [@media(min-width:576px)]:h-[40px] [@media(max-width:576px)]:h-[35px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-white" placeholder="Телефон" />
-                  <textarea id="userComment-first" rows="3" class="w-full px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-white" placeholder="Комментарий"></textarea>
-                </div>
-                <div class="button-content mt-3 w-full flex justify-center items-center">
-                  <button id="sent-feedback-button" type="button" class="border-none [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[white] bg-[#0D2668]">
-                    Отправить
-                  </button>
-                </div>
-              </form>
-            </div>
-            <!-- Form Content end -->
-          </div>
-        </div>
-        <!-- Form end -->
-
-        <!-- Feedback from our clients start -->
-        <div class="feedback max-w-screen-xl mx-auto px-3 py-16">
-          <!-- Text content start -->
-          <div class="text-content pl-3 pr-4 mx-auto max-w-[1000px] overflow-hidden">
-            <!-- Title start -->
-            <div class="title text-center [@media(min-width:576px)]:text-[35px] [@media(max-width:576px)]:text-[26px] text-[#0D2668] font-[600]">
-              Отзывы наших клиентов
-            </div>
-            <!-- Title end -->
-          </div>
-          <!-- Text content end -->
-
-          <div id="videosWrapper" class="card-wrapper mt-3 w-full mx-auto flex flex-wrap">
-            @foreach($events as $event)
-              
-            <div class="video-card 1 [@media(min-width:500px)]:w-[33.3%] [@media(min-width:420px)]:w-[50%] [@media(max-width:420px)]:w-[100%] overflow-hidden p-2">
-              <div class="w-full shadow-md h-full bg-white">
-                <div class="img-content [@media(min-width:768px)]:h-[250px] [@media(min-width:650px)]:h-[180px] [@media(min-width:420px)]:h-[120px] [@media(max-width:420px)]:h-[180px] relative" >
-                  <div id="video-play-btn" class="play [@media(min-width:768px)]:w-[40px] [@media(min-width:768px)]:h-[40px] [@media(max-width:768px)]:w-[25px] [@media(max-width:768px)]:h-[25px] cursor-pointer absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
-                    <svg onclick="activeVideo(event)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none" class="w-full h-full">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M30 0C13.4314 0 0 13.4316 0 30C0 46.5684 13.4314 60 30 60C46.5686 60 60 46.5684 60 30C60 13.4316 46.5686 0 30 0ZM26 36.9282L38 30L26 23.0718V36.9282Z" fill="white" />
-                    </svg>
-                  </div>
-                  <a data-fancybox href="{{ $event->frame }}">
-                    <img id="videoImg" class="w-full h-full object-cover" src="{{ asset($event->image) }}" />
-                  </a>
-                </div>
-                <div class="text-content h-full overflow-hidden [@media(min-width:700px)]:py-2 [@media(max-width:700px)]:py-1 px-3" >
-                  <!-- Text Content start -->
-                  <div class="text-content py-2 h-full w-full overflow-hidden">
-                    <!-- Title start -->
-                    <div class="title [@media(min-width:700px)]:text-[18px] [@media(max-width:700px)]:text-[16px] text-[#0D2668] font-[600]" >
-                      {{ $event->{'title_' . app()->getLocale()} }}
-                    </div>
-                    <!-- Title end -->
-
-                    <!-- Description start -->
-                    <div class="description mt-1 [@media(min-width:700px)]:max-h-[115px] [@media(max-width:700px)]:max-h-[60px] overflow-hidden [@media(min-width:700px)]:text-[15px] [@media(max-width:700px)]:text-[13px]" >
-                      {!! $event->{'content_' . app()->getLocale()} !!}
-                    </div>
-                    <!-- Description end -->
-                  </div>
-                  <!-- Text Content end -->
-                </div>
-              </div>
-            </div>
-                  </div>
-                  </div>
-                  <a data-fancybox href="https://youtu.be/ldbvjn2sIzg">
-                    <img
-                      id="videoImg"
-                      class="w-full h-full object-cover"
-                      src="./src/images/slider-room-1.jpg"
-                    />
-                  </a>
-                </div>
-                <div
-                  class="text-content h-full overflow-hidden [@media(min-width:700px)]:py-2 [@media(max-width:700px)]:py-1 px-3"
-                >
-                  <!-- Text Content start -->
-                  <div class="text-content py-2 h-full w-full overflow-hidden">
-                    <!-- Title start -->
-                    <div
-                      class="title [@media(min-width:700px)]:text-[18px] [@media(max-width:700px)]:text-[16px] text-[#0D2668] font-[600]"
-                    >
-                      John Doe
-                    </div>
-                    <!-- Title end -->
-          </div>
-                  <a data-fancybox href="https://youtu.be/ldbvjn2sIzg">
-                    <img
-                      id="videoImg"
-                      class="w-full h-full object-cover"
-                      src="./src/images/slider-room-1.jpg"
-                    />
-                  </a>
-                </div>
-                <div
-                  class="text-content h-full overflow-hidden [@media(min-width:700px)]:py-2 [@media(max-width:700px)]:py-1 px-3"
-                >
-                  <!-- Text Content start -->
-                  <div class="text-content py-2 h-full w-full overflow-hidden">
-                    <!-- Title start -->
-                    <div
-                      class="title [@media(min-width:700px)]:text-[18px] [@media(max-width:700px)]:text-[16px] text-[#0D2668] font-[600]"
-                    >
-                      John Doe
-                    </div>
-                    <!-- Title end -->
-
           <div class="button-content mt-3 w-full flex justify-center items-center">
-            <button onclick="moreVideo()" type="button"  class="border-none mt-5 [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[white] bg-[#0D2668]" >
-              Больше
+            <button id="sent-feedback-button" type="button" class="border-none [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[white] bg-[#0D2668]">
+              Отправить
             </button>
           </div>
-        </div>
+        </form>
+      </div>
+      <!-- Form Content end -->
+    </div>
+  </div>
+  <!-- Form end -->
 
-        <!-- Feedback Modal start -->
-        <div id="feedback-backdrop" class="hidden backdrop px-5 fixed z-50 justify-center items-center top-0 left-0 w-full h-full bg-[rgb(0,0,0,0.60)]">
-          <div class="transition-all duration-[0.2s] ease-linear max-w-screen-md bg-white h-fit mx-auto p-3" >
-            <!-- Text content start -->
-            <div class="text-content pl-3 pr-4 mx-auto max-w-[1000px] overflow-hidden" >
+  <!-- Feedback from our clients start -->
+  <div class="feedback max-w-screen-xl mx-auto px-3 py-16">
+    <!-- Text content start -->
+    <div class="text-content pl-3 pr-4 mx-auto max-w-[1000px] overflow-hidden">
+      <!-- Title start -->
+      <div class="title text-center [@media(min-width:576px)]:text-[35px] [@media(max-width:576px)]:text-[26px] text-[#0D2668] font-[600]">
+        Отзывы наших клиентов
+      </div>
+      <!-- Title end -->
+    </div>
+    <!-- Text content end -->
+
+    <div id="videosWrapper" class="card-wrapper mt-3 w-full mx-auto flex flex-wrap">
+      @foreach($events as $event)
+        
+      <div class="video-card 1 [@media(min-width:500px)]:w-[33.3%] [@media(min-width:420px)]:w-[50%] [@media(max-width:420px)]:w-[100%] overflow-hidden p-2">
+        <div class="w-full shadow-md h-full bg-white">
+          <div class="img-content [@media(min-width:768px)]:h-[250px] [@media(min-width:650px)]:h-[180px] [@media(min-width:420px)]:h-[120px] [@media(max-width:420px)]:h-[180px] relative" >
+            <div id="video-play-btn" class="play [@media(min-width:768px)]:w-[40px] [@media(min-width:768px)]:h-[40px] [@media(max-width:768px)]:w-[25px] [@media(max-width:768px)]:h-[25px] cursor-pointer absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+              <svg onclick="activeVideo(event)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none" class="w-full h-full">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M30 0C13.4314 0 0 13.4316 0 30C0 46.5684 13.4314 60 30 60C46.5686 60 60 46.5684 60 30C60 13.4316 46.5686 0 30 0ZM26 36.9282L38 30L26 23.0718V36.9282Z" fill="white" />
+              </svg>
+            </div>
+            <a data-fancybox href="{{ $event->frame }}">
+              <img id="videoImg" class="w-full h-full object-cover" src="{{ asset($event->image) }}" />
+            </a>
+          </div>
+          <div class="text-content h-full overflow-hidden [@media(min-width:700px)]:py-2 [@media(max-width:700px)]:py-1 px-3" >
+            <!-- Text Content start -->
+            <div class="text-content py-2 h-full w-full overflow-hidden">
               <!-- Title start -->
-              <div class="title text-center text-[#0D2668] [@media(min-width:576px)]:text-[30px] [@media(max-width:576px)]:text-[24px] font-[600]" >
-                Оставить отзыв
+              <div class="title [@media(min-width:700px)]:text-[18px] [@media(max-width:700px)]:text-[16px] text-[#0D2668] font-[600]" >
+                {{ $event->{'title_' . app()->getLocale()} }}
               </div>
               <!-- Title end -->
-            </div>
-            <!-- Text content end -->
 
-            <!-- Form Content start -->
-            <div class="form-content mx-auto px-2 max-w-[500px]">
-              <form action="" method="get" class="my-3">
-                <div class="input-content">
-                  <input id="userName-second" required type="text" class="w-full [@media(min-width:576px)]:h-[40px] [@media(max-width:576px)]:h-[35px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-[#F3F4F7]" placeholder="Имя"/>
-                  <input id="userNumber-second" required type="number" class="w-full [@media(min-width:576px)]:h-[40px] [@media(max-width:576px)]:h-[35px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-[#F3F4F7]" placeholder="Телефон" />
-                  <textarea id="userComment-second" required type="text" class="w-full h-[100px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-[#F3F4F7]" placeholder="Комментарий"></textarea>
-                </div>
-                <div class="upload-video mb-5 w-full">
-                  <input type="file" class="hidden" id="file" />
-                  <label for="file" class="border text-center block bg-white border-[#0D2668] [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#0D2668]" >
-                    Загрузить видео
-                  </label>
-                </div>
-                <div class="button-content mt-3 w-full flex justify-center items-center" >
-                  <button type="submit" class="border-none [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[white] bg-[#0D2668]" >
-                    Отправить
-                  </button>
-                </div>
-              </form>
-            </div>
-            <!-- Form Content end -->
-          </div>
-        </div>
-        <!-- Feedback Modal end -->
-        <!-- Feedback from our clients end -->
-
-         <!-- Accardion start -->
-         <div class="accordion pt-14 pb-16 px-4 mx-auto bg-[white]">
-          <!-- Text content start -->
-          <div class="text-content mx-auto max-w-[1000px] w-full overflow-hidden">
-            <!-- Title start -->
-            <div class="title text-center text-[#0D2668] [@media(min-width:768px)]:text-[40px] [@media(min-width:576px)]:text-[30px] [@media(max-width:576px)]:text-[24px] font-[600]">
-              Обратная связь
-            </div>
-            <!-- Title end -->
-
-            <!-- Description start -->
-            <div class="description text-center text-white [@media(min-width:576px)]:mt-3 [@media(max-width:576px)]:mt-1 [@media(min-width:768px)]:text-[20px] [@media(max-width:768px)]:text-[18px] [@media(max-width:576px)]:text-[14px]" >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
-            </div>
-            <!-- Description end -->
-          </div>
-          <!-- Text content end -->
-          <div class="max-w-[800px] mx-auto">
-           @foreach($faqs as $faq)
-            <div class="relative" x-data="{selected:null}">
-              <button type="button" class="w-full border-t border-b py-5 text-left flex justify-between items-center" @click="selected !== 1 ? selected = 1 : selected = null" >
-                <div class="title [@media(min-width:576px)]:text-[20px] [@media(max-width:576px)]:text-[17px] font-[600] text-[#0D2668]">
-                  {{ $faq->{'title_' . app()->getLocale()} }}
-                </div>
-
-                <div class="plus-icon w-[18px] he-[18px]">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="w-full h-full">
-                    <path d="M0 11H24V13H0V11Z" fill="#0D2668" />
-                    <path d="M13 8.74224e-08L13 24H11L11 0L13 8.74224e-08Z" fill="#0D2668"/>
-                  </svg>
-                </div>
-              </button>
-
-              <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''" >
-                <div class="py-5 text-description [@media(min-width:576)]:text-[18px] [@media(max-width:576)]:text-[14px] text-[#0D2668]">
-                  {!! $faq->{'content_' . app()->getLocale()} !!}
-                </div>
+              <!-- Description start -->
+              <div class="description mt-1 [@media(min-width:700px)]:max-h-[115px] [@media(max-width:700px)]:max-h-[60px] overflow-hidden [@media(min-width:700px)]:text-[15px] [@media(max-width:700px)]:text-[13px]" >
+                {!! $event->{'content_' . app()->getLocale()} !!}
               </div>
+              <!-- Description end -->
             </div>
-            @endforeach
+            <!-- Text Content end -->
           </div>
         </div>
-        <!-- Accardion end -->
+      </div>
+      @endforeach
+    </div>
+            
+    <div class="button-content mt-3 w-full flex justify-center items-center">
+      <button onclick="moreVideo()" type="button"  class="border-none mt-5 [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[white] bg-[#0D2668]" >
+        Больше
+      </button>
+    </div>
+</div>
+
+  <!-- Feedback Modal start -->
+  <div id="feedback-backdrop" class="hidden backdrop px-5 fixed z-50 justify-center items-center top-0 left-0 w-full h-full bg-[rgb(0,0,0,0.60)]">
+    <div class="transition-all duration-[0.2s] ease-linear max-w-screen-md bg-white h-fit mx-auto p-3" >
+      <!-- Text content start -->
+      <div class="text-content pl-3 pr-4 mx-auto max-w-[1000px] overflow-hidden" >
+        <!-- Title start -->
+        <div class="title text-center text-[#0D2668] [@media(min-width:576px)]:text-[30px] [@media(max-width:576px)]:text-[24px] font-[600]" >
+          Оставить отзыв
+        </div>
+        <!-- Title end -->
+      </div>
+      <!-- Text content end -->
+
+      <!-- Form Content start -->
+      <div class="form-content mx-auto px-2 max-w-[500px]">
+        <form action="" method="get" class="my-3">
+          <div class="input-content">
+            <input id="userName-second" required type="text" class="w-full [@media(min-width:576px)]:h-[40px] [@media(max-width:576px)]:h-[35px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-[#F3F4F7]" placeholder="Имя"/>
+            <input id="userNumber-second" required type="number" class="w-full [@media(min-width:576px)]:h-[40px] [@media(max-width:576px)]:h-[35px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-[#F3F4F7]" placeholder="Телефон" />
+            <textarea id="userComment-second" required type="text" class="w-full h-[100px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-[#F3F4F7]" placeholder="Комментарий"></textarea>
+          </div>
+          <div class="upload-video mb-5 w-full">
+            <input type="file" class="hidden" id="file" />
+            <label for="file" class="border text-center block bg-white border-[#0D2668] [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#0D2668]" >
+              Загрузить видео
+            </label>
+          </div>
+          <div class="button-content mt-3 w-full flex justify-center items-center" >
+            <button type="submit" class="border-none [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[white] bg-[#0D2668]" >
+              Отправить
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- Form Content end -->
+    </div>
+  </div>
+  <!-- Feedback Modal end -->
+  <!-- Feedback from our clients end -->
+
+   <!-- Accardion start -->
+   <div class="accordion pt-14 pb-16 px-4 mx-auto bg-[white]">
+    <!-- Text content start -->
+    <div class="text-content mx-auto max-w-[1000px] w-full overflow-hidden">
+      <!-- Title start -->
+      <div class="title text-center text-[#0D2668] [@media(min-width:768px)]:text-[40px] [@media(min-width:576px)]:text-[30px] [@media(max-width:576px)]:text-[24px] font-[600]">
+        Обратная связь
+      </div>
+      <!-- Title end -->
+
+      <!-- Description start -->
+      <div class="description text-center text-white [@media(min-width:576px)]:mt-3 [@media(max-width:576px)]:mt-1 [@media(min-width:768px)]:text-[20px] [@media(max-width:768px)]:text-[18px] [@media(max-width:576px)]:text-[14px]" >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </div>
+      <!-- Description end -->
+    </div>
+    <!-- Text content end -->
+    <div class="max-w-[800px] mx-auto">
+     @foreach($faqs as $faq)
+      <div class="relative" x-data="{selected:null}">
+        <button type="button" class="w-full border-t border-b py-5 text-left flex justify-between items-center" @click="selected !== 1 ? selected = 1 : selected = null" >
+          <div class="title [@media(min-width:576px)]:text-[20px] [@media(max-width:576px)]:text-[17px] font-[600] text-[#0D2668]">
+            {{ $faq->{'title_' . app()->getLocale()} }}
+          </div>
+
+          <div class="plus-icon w-[18px] he-[18px]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="w-full h-full">
+              <path d="M0 11H24V13H0V11Z" fill="#0D2668" />
+              <path d="M13 8.74224e-08L13 24H11L11 0L13 8.74224e-08Z" fill="#0D2668"/>
+            </svg>
+          </div>
+        </button>
+
+        <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''" >
+          <div class="py-5 text-description [@media(min-width:576)]:text-[18px] [@media(max-width:576)]:text-[14px] text-[#0D2668]">
+            {!! $faq->{'content_' . app()->getLocale()} !!}
+          </div>
+        </div>
+      </div>
+      @endforeach
+    </div>
+  </div>
+  <!-- Accardion end -->
+
 
         <!-- Numbers start -->
         <div class="feedback-number form w-full py-20 mx-auto relative bg-no-repeat bg-center bg-cover flex flex-wrap justify-center items-center pl-3 pr-4" style="background-image: url('{{ asset('front/src/images/slider-room-3.jpg') }}')">
