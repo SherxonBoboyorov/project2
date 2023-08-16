@@ -442,6 +442,7 @@ video {
 
 input::-moz-placeholder, textarea::-moz-placeholder {
   font-family: "Proxima Nova" !important;
+  color: #696969;
 }
 
 body,
@@ -459,6 +460,7 @@ body,
   textarea::placeholder,
   * {
   font-family: "Proxima Nova" !important;
+  color: #696969;
 }
 
 .nav-link-styles {
@@ -483,18 +485,9 @@ body,
 }
 
 .infinity-wrapper:hover .slide-first,
-  .infinity-wrapper:hover .slide-second {
+  .infinity-wrapper:hover .slide-second,
+  .infinity-wrapper:hover .slide-thirth {
   animation-play-state: paused;
-}
-
-@keyframes horizontal-scrolling-animation {
-  0% {
-    left: 100%;
-  }
-
-  100% {
-    left: -100%;
-  }
 }
 
 .swiper-button-next:after,
@@ -520,6 +513,16 @@ body,
   .swiper .swiper-button-next:after,
     .swiper .swiper-button-prev:after {
     font-size: 10px !important;
+  }
+}
+
+@keyframes horizontal-scrolling-animation {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: -100%;
   }
 }
 
@@ -868,8 +871,16 @@ body,
   margin-left: 0.75rem;
 }
 
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
 .mr-3 {
   margin-right: 0.75rem;
+}
+
+.mr-5 {
+  margin-right: 1.25rem;
 }
 
 .mr-\[60px\] {
@@ -1074,14 +1085,6 @@ body,
 
 .max-h-\[352px\] {
   max-height: 352px;
-}
-
-.max-h-\[440px\] {
-  max-height: 440px;
-}
-
-.max-h-\[445px\] {
-  max-height: 445px;
 }
 
 .max-h-\[435px\] {
@@ -2210,9 +2213,9 @@ body,
   background-color: #ffffff7d;
 }
 
-.bg-\[red\] {
+.bg-\[\#ffffff\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-\[rgb\(0\2c 0\2c 0\2c 0\.60\)\] {
@@ -2451,6 +2454,10 @@ body,
   padding-bottom: 0.75rem;
 }
 
+.pb-7 {
+  padding-bottom: 1.75rem;
+}
+
 .pl-2 {
   padding-left: 0.5rem;
 }
@@ -2656,11 +2663,6 @@ body,
 .text-\[\#ffffff\] {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[red\] {
-  --tw-text-opacity: 1;
-  color: rgb(255 0 0 / var(--tw-text-opacity));
 }
 
 .text-\[white\] {
@@ -3250,6 +3252,24 @@ body,
   }
 }
 
+@media(max-width:1085px) {
+  .\[\@media\(max-width\:1085px\)\]\:hidden {
+    display: none;
+  }
+}
+
+@media(max-width:1400px) {
+  .\[\@media\(max-width\:1400px\)\]\:hidden {
+    display: none;
+  }
+}
+
+@media(max-width:1700px) {
+  .\[\@media\(max-width\:1700px\)\]\:hidden {
+    display: none;
+  }
+}
+
 @media(max-width:420px) {
   .\[\@media\(max-width\:420px\)\]\:h-\[180px\] {
     height: 180px;
@@ -3295,6 +3315,20 @@ body,
 
   .\[\@media\(max-width\:500px\)\]\:w-full {
     width: 100%;
+  }
+}
+
+@media(max-width:540px) {
+  .\[\@media\(max-width\:540px\)\]\:hidden {
+    display: none;
+  }
+
+  .\[\@media\(max-width\:540px\)\]\:justify-around {
+    justify-content: space-around;
+  }
+
+  .\[\@media\(max-width\:540px\)\]\:pl-2 {
+    padding-left: 0.5rem;
   }
 }
 
@@ -3467,6 +3501,12 @@ body,
   }
 }
 
+@media(max-width:820px) {
+  .\[\@media\(max-width\:820px\)\]\:hidden {
+    display: none;
+  }
+}
+
 @media(max-width:850px) {
   .\[\@media\(max-width\:850px\)\]\:my-10 {
     margin-top: 2.5rem;
@@ -3531,6 +3571,24 @@ body,
   }
 }
 
+@media(min-width:1085px) {
+  .\[\@media\(min-width\:1085px\)\]\:block {
+    display: block;
+  }
+}
+
+@media(min-width:1600px) {
+  .\[\@media\(min-width\:1600px\)\]\:block {
+    display: block;
+  }
+}
+
+@media(min-width:1700px) {
+  .\[\@media\(min-width\:1700px\)\]\:block {
+    display: block;
+  }
+}
+
 @media(min-width:420px) {
   .\[\@media\(min-width\:420px\)\]\:h-\[120px\] {
     height: 120px;
@@ -3574,6 +3632,16 @@ body,
 
   .\[\@media\(min-width\:500px\)\]\:w-\[48\%\] {
     width: 48%;
+  }
+}
+
+@media(min-width:540px) {
+  .\[\@media\(min-width\:540px\)\]\:block {
+    display: block;
+  }
+
+  .\[\@media\(min-width\:540px\)\]\:justify-evenly {
+    justify-content: space-evenly;
   }
 }
 
@@ -3714,8 +3782,8 @@ body,
     height: 500px;
   }
 
-  .\[\@media\(min-width\:768px\)\]\:w-\[31\%\] {
-    width: 31%;
+  .\[\@media\(min-width\:768px\)\]\:w-\[33\%\] {
+    width: 33%;
   }
 
   .\[\@media\(min-width\:768px\)\]\:w-\[40px\] {
@@ -3742,6 +3810,12 @@ body,
 
   .\[\@media\(min-width\:800px\)\]\:w-1\/2 {
     width: 50%;
+  }
+}
+
+@media(min-width:820px) {
+  .\[\@media\(min-width\:820px\)\]\:block {
+    display: block;
   }
 }
 

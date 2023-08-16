@@ -13,7 +13,19 @@ return [
     'shartnoma' => 'O‘zbekistondagi ko‘plab yirik kompaniyalar bilan muvaffaqiyatli reklama shartnomalari tuzdik.',
     'bizning_hamkorlarimiz' => 'Bizning hamkorlarimiz',
     'kompaniyalarga_aylangan' => 'Bizning hamkorlarimiz allaqachon quyidagi kompaniyalarga aylangan:',
-    'bizning_kontaktlarimiz' => 'Bizning kontaktlarimiz'
+    'bizning_kontaktlarimiz' => 'Bizning kontaktlarimiz',
+    'biz_haqimizda' => 'Biz haqimizda',
+    'filiallar' => 'Filiallar',
+    'hamkorlar' => 'Hamkorlar',
+    'kontaktlar' => 'Kontaktlar',
+    'himoyalangan' => 'Barcha huquqlar himoyalangan',
+    'bosh_sahifa' => 'Bosh sahifa',
+    'fikr_qoldiring' => 'Fikr qoldiring',
+    'video_yuklash' => 'Video yuklab olish',
+    'ism' => 'Ism',
+    'telefon' => 'Telefon',
+    'izoh' => 'Izoh'
+
 ];
 
 ?>

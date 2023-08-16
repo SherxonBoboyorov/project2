@@ -13,7 +13,18 @@ return [
      'shartnoma' => 'Мы успешно заключили рекламные контракты со многими крупными компаниями в Узбекистане.',
      'bizning_hamkorlarimiz' => 'Наши партнеры',
      'kompaniyalarga_aylangan' => 'Нашими партнерами уже успели стать такие компании как:',
-     'bizning_kontaktlarimiz' => 'Наши контакты'
+     'bizning_kontaktlarimiz' => 'Наши контакты',
+     'biz_haqimizda' => 'О нас',
+     'filiallar' => 'Филиалы',
+     'hamkorlar' => 'Партнеры',
+     'kontaktlar' => 'Контакты',
+     'himoyalangan' => 'Все права защищены',
+     'bosh_sahifa' => 'Главная',
+     'fikr_qoldiring' => 'Оставить отзыв',
+     'video_yuklash' => 'Загрузить видео',
+     'ism' => 'Имя',
+     'telefon' => 'Телефон',
+     'izoh' => 'Комментарий'
 
 ]
 

@@ -41,16 +41,16 @@
               class="links w-[65%] hidden lg:flex justify-evenly items-center"
             >
               <div class="link">
-                <a href="{{ route('about') }}" class="nav-link-styles"> О нас </a>
+                <a href="{{ route('about') }}" class="nav-link-styles">@lang('front.biz_haqimizda')</a>
               </div>
               <div class="link">
-                <a href="#branches" class="nav-link-styles"> Филиалы </a>
+                <a href="#branches" class="nav-link-styles">@lang('front.filiallar')</a>
               </div>
               <div class="link">
-                <a href="#partners" class="nav-link-styles"> Партнеры </a>
+                <a href="#partners" class="nav-link-styles">@lang('front.hamkorlar')</a>
               </div>
               <div class="link">
-                <a href="#contacts" class="nav-link-styles"> Контакты </a>
+                <a href="#contacts" class="nav-link-styles">@lang('front.kontaktlar')</a>
               </div>
             </div>
             <!-- Navbar-links end -->
@@ -58,7 +58,7 @@
             <!-- Social media and languages start -->
             <div class="lg:w-[220px] languages-content flex justify-between">
               <div class="sm-icons hidden lg:flex justify-between items-center w-[110px]">
-                <a href="#" class="sm-icon">
+                <a href="{{ $options->where('key', 'instagram')->first()->value }}" class="sm-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" >
                     <rect width="30" height="30" rx="15" fill="#0D2668" />
                     <path d="M14.9679 8.25C15.866 8.28207 16.7962 8.28208 17.6943 8.31415C18.4962 8.34623 19.2339 8.47452 19.9395 8.8915C20.8376 9.43677 21.3829 10.2386 21.5754 11.265C21.6716 11.8745 21.7037 12.516 21.7357 13.1254C21.7678 14.4725 21.7357 15.8197 21.7357 17.1668C21.7357 17.8725 21.7037 18.5781 21.4791 19.2517C21.0301 20.5668 20.0999 21.3687 18.7528 21.6253C18.1433 21.7536 17.5018 21.7536 16.8924 21.7856C15.5453 21.8177 14.2302 21.7856 12.8831 21.7856C12.1774 21.7856 11.4718 21.7536 10.7982 21.529C9.4831 21.08 8.68123 20.1498 8.42463 18.8027C8.29633 18.1932 8.29633 17.5517 8.26426 16.9423C8.23218 15.5952 8.26426 14.248 8.26426 12.9009C8.26426 12.1952 8.29633 11.4896 8.52086 10.816C8.9699 9.50092 9.90008 8.69905 11.2472 8.44245C11.8567 8.31415 12.4982 8.31415 13.1076 8.28208C13.6849 8.25 14.3264 8.25 14.9679 8.25ZM20.5169 14.8895C20.4848 14.8895 20.5169 14.8895 20.5169 14.8895C20.4848 14.3442 20.4848 13.831 20.4848 13.2858C20.4848 12.7726 20.4527 12.2594 20.3886 11.7462C20.2603 10.5915 19.5867 9.82167 18.4641 9.59715C17.8867 9.46885 17.2452 9.46885 16.6679 9.46885C15.5132 9.43677 14.3906 9.43677 13.2359 9.46885C12.6585 9.46885 12.0812 9.50092 11.5359 9.59715C10.5737 9.75752 9.90008 10.3028 9.6114 11.265C9.51518 11.5858 9.4831 11.9065 9.45103 12.2273C9.41895 13.4461 9.41895 14.665 9.41895 15.8838C9.41895 16.6536 9.45103 17.4555 9.51518 18.2253C9.6114 19.38 10.3171 20.1819 11.4718 20.3743C12.0491 20.4706 12.6585 20.5026 13.268 20.5026C14.3906 20.5347 15.5132 20.5026 16.6679 20.5026C17.1811 20.5026 17.6943 20.4706 18.2075 20.4064C18.6886 20.3743 19.1377 20.214 19.5226 19.8932C20.1641 19.38 20.3886 18.7064 20.4207 17.9366C20.4848 16.9744 20.4848 15.9159 20.5169 14.8895Z" fill="white" />
@@ -67,11 +67,11 @@
                   </svg>
                 </a>
                 <div class="sm-icon bg-[#0d2668] w-[30px] mx-2 h-[30px] rounded-full">
-                  <a href="#" class="flex justify-center items-center w-full h-full" >
-                    <img src="./src/icons/bi_youtube.svg" alt="" />
+                  <a href="{{ $options->where('key', 'youtube')->first()->value }}" class="flex justify-center items-center w-full h-full" >
+                    <img src="{{ asset('front/src/icons/bi_youtube.svg') }}" alt="" />
                   </a>
                 </div>
-                <a href="#" class="sm-icon">
+                <a href="{{ $options->where('key', 'telegram')->first()->value }}" class="sm-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                     <rect width="30" height="30" rx="15" fill="#0D2668" />
                     <path d="M21.75 9.71717C21.7134 10.0466 21.6402 10.4127 21.567 10.7422C20.9446 13.6708 20.3223 16.5994 19.7 19.528C19.6634 19.711 19.6268 19.8574 19.5535 20.0039C19.4071 20.2601 19.1875 20.3333 18.8946 20.2601C18.7116 20.2235 18.5651 20.1503 18.4187 20.0405C17.4669 19.3449 16.5517 18.6494 15.5999 17.9539C15.4901 17.8806 15.4169 17.8806 15.3071 17.9905C14.8312 18.4298 14.3919 18.9057 13.916 19.3449C13.733 19.528 13.5499 19.6378 13.2937 19.6012C13.1106 19.6012 13.0008 19.528 12.9642 19.3449C12.6713 18.4298 12.3785 17.5512 12.0856 16.636C11.9758 16.3431 11.866 16.0137 11.7928 15.7208C11.7561 15.611 11.7195 15.5378 11.5731 15.5012C10.6579 15.2083 9.74273 14.9154 8.82755 14.6592C8.71772 14.6226 8.57129 14.586 8.46147 14.5128C8.20522 14.3663 8.16861 14.1467 8.42486 13.927C8.57129 13.7806 8.75433 13.7074 8.97398 13.6342C10.2186 13.1583 11.4633 12.6824 12.7079 12.2065C15.4169 11.1815 18.0892 10.1199 20.7982 9.09484C20.8348 9.09484 20.8348 9.09484 20.8714 9.05823C21.3839 8.8752 21.75 9.13145 21.75 9.71717ZM13.3303 18.7592C13.3669 18.7226 13.3669 18.686 13.3669 18.686C13.4401 18.0271 13.4767 17.3681 13.5499 16.7092C13.5499 16.5628 13.6231 16.4163 13.733 16.3065C15.4901 14.7324 17.2473 13.1583 19.0044 11.5842C19.1143 11.4743 19.2241 11.4011 19.3339 11.2913C19.3705 11.2547 19.4437 11.2181 19.4071 11.1449C19.3705 11.0716 19.2973 11.0716 19.2241 11.0716C19.0777 11.0716 18.9678 11.1449 18.858 11.2181C16.6982 12.5726 14.5383 13.927 12.3785 15.3181C12.2687 15.3913 12.232 15.4645 12.2687 15.611C12.5249 16.4163 12.7812 17.2217 13.074 18.0271C13.1472 18.2101 13.2204 18.4664 13.3303 18.7592Z" fill="white" />
@@ -80,9 +80,14 @@
               </div>
 
               <div class="language flex justify-center items-center w-[45%]">
-                <a href="#" class="mr-3 nav-link-styles [@media(max-width:450px)]:text-[16px] [@media(min-width:450px)]:text-[18px]" >Ru</a>
-                <a href="#" class="nav-link-styles [@media(max-width:450px)]:text-[16px] [@media(min-width:450px)]:text-[18px]" >Uz</a>
+                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+
+                <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}" class="mr-3 nav-link-styles [@media(max-width:450px)]:text-[16px] [@media(min-width:450px)]:text-[18px]" >
+                  {{ $properties['native'] }}
+                </a>
+                 @endforeach
               </div>
+            </ul>
             </div>
             <!-- Social media and languages end -->
           </div>
@@ -95,16 +100,16 @@
               <!-- Navbar links start -->
               <div class="links w-full">
                 <div class="link">
-                  <a href="{{ route('about') }}" class="nav-link-styles"> О нас </a>
+                  <a href="{{ route('about') }}" class="nav-link-styles">@lang('front.biz_haqimizda')</a>
                 </div>
                 <div class="link my-3">
-                  <a href="#branches" class="nav-link-styles"> Филиалы </a>
+                  <a href="{{ route('about') }}" class="nav-link-styles">@lang('front.filiallar')</a>
                 </div>
                 <div class="link my-3">
-                  <a href="#partners" class="nav-link-styles"> Партнеры </a>
+                  <a href="#partners" class="nav-link-styles">@lang('front.hamkorlar')</a>
                 </div>
                 <div class="link">
-                  <a href="#contacts" class="nav-link-styles"> Контакты </a>
+                  <a href="#contacts" class="nav-link-styles">@lang('front.kontaktlar')</a>
                 </div>
               </div>
               <!-- Navbar links end -->
@@ -112,7 +117,7 @@
               <!-- social media icons start -->
               <div class="w-[220px] mt-3 languages-content flex justify-between">
                 <div class="sm-icons flex justify-between items-center w-[110px]">
-                  <a href="#" class="sm-icon">
+                  <a href="{{ $options->where('key', 'instagram')->first()->value }}" class="sm-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                       <rect width="30" height="30" rx="15" fill="#0D2668" />
                       <path d="M14.9679 8.25C15.866 8.28207 16.7962 8.28208 17.6943 8.31415C18.4962 8.34623 19.2339 8.47452 19.9395 8.8915C20.8376 9.43677 21.3829 10.2386 21.5754 11.265C21.6716 11.8745 21.7037 12.516 21.7357 13.1254C21.7678 14.4725 21.7357 15.8197 21.7357 17.1668C21.7357 17.8725 21.7037 18.5781 21.4791 19.2517C21.0301 20.5668 20.0999 21.3687 18.7528 21.6253C18.1433 21.7536 17.5018 21.7536 16.8924 21.7856C15.5453 21.8177 14.2302 21.7856 12.8831 21.7856C12.1774 21.7856 11.4718 21.7536 10.7982 21.529C9.4831 21.08 8.68123 20.1498 8.42463 18.8027C8.29633 18.1932 8.29633 17.5517 8.26426 16.9423C8.23218 15.5952 8.26426 14.248 8.26426 12.9009C8.26426 12.1952 8.29633 11.4896 8.52086 10.816C8.9699 9.50092 9.90008 8.69905 11.2472 8.44245C11.8567 8.31415 12.4982 8.31415 13.1076 8.28208C13.6849 8.25 14.3264 8.25 14.9679 8.25ZM20.5169 14.8895C20.4848 14.8895 20.5169 14.8895 20.5169 14.8895C20.4848 14.3442 20.4848 13.831 20.4848 13.2858C20.4848 12.7726 20.4527 12.2594 20.3886 11.7462C20.2603 10.5915 19.5867 9.82167 18.4641 9.59715C17.8867 9.46885 17.2452 9.46885 16.6679 9.46885C15.5132 9.43677 14.3906 9.43677 13.2359 9.46885C12.6585 9.46885 12.0812 9.50092 11.5359 9.59715C10.5737 9.75752 9.90008 10.3028 9.6114 11.265C9.51518 11.5858 9.4831 11.9065 9.45103 12.2273C9.41895 13.4461 9.41895 14.665 9.41895 15.8838C9.41895 16.6536 9.45103 17.4555 9.51518 18.2253C9.6114 19.38 10.3171 20.1819 11.4718 20.3743C12.0491 20.4706 12.6585 20.5026 13.268 20.5026C14.3906 20.5347 15.5132 20.5026 16.6679 20.5026C17.1811 20.5026 17.6943 20.4706 18.2075 20.4064C18.6886 20.3743 19.1377 20.214 19.5226 19.8932C20.1641 19.38 20.3886 18.7064 20.4207 17.9366C20.4848 16.9744 20.4848 15.9159 20.5169 14.8895Z" fill="white"/>
@@ -122,11 +127,11 @@
                   </a>
                   <div
                     class="sm-icon bg-[#0d2668] w-[30px] mx-2 h-[30px] rounded-full">
-                    <a href="#" class="flex justify-center items-center w-full h-full">
-                      <img src="./src/icons/bi_youtube.svg" alt="" />
+                    <a href="{{ $options->where('key', 'youtube')->first()->value }}" class="flex justify-center items-center w-full h-full">
+                      <img src="{{ asset('front/src/icons/bi_youtube.svg') }}" alt="" />
                     </a>
                   </div>
-                  <a href="#" class="sm-icon">
+                  <a href="{{ $options->where('key', 'telegram')->first()->value }}" class="sm-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                       <rect width="30" height="30" rx="15" fill="#0D2668" />
                       <path d="M21.75 9.71717C21.7134 10.0466 21.6402 10.4127 21.567 10.7422C20.9446 13.6708 20.3223 16.5994 19.7 19.528C19.6634 19.711 19.6268 19.8574 19.5535 20.0039C19.4071 20.2601 19.1875 20.3333 18.8946 20.2601C18.7116 20.2235 18.5651 20.1503 18.4187 20.0405C17.4669 19.3449 16.5517 18.6494 15.5999 17.9539C15.4901 17.8806 15.4169 17.8806 15.3071 17.9905C14.8312 18.4298 14.3919 18.9057 13.916 19.3449C13.733 19.528 13.5499 19.6378 13.2937 19.6012C13.1106 19.6012 13.0008 19.528 12.9642 19.3449C12.6713 18.4298 12.3785 17.5512 12.0856 16.636C11.9758 16.3431 11.866 16.0137 11.7928 15.7208C11.7561 15.611 11.7195 15.5378 11.5731 15.5012C10.6579 15.2083 9.74273 14.9154 8.82755 14.6592C8.71772 14.6226 8.57129 14.586 8.46147 14.5128C8.20522 14.3663 8.16861 14.1467 8.42486 13.927C8.57129 13.7806 8.75433 13.7074 8.97398 13.6342C10.2186 13.1583 11.4633 12.6824 12.7079 12.2065C15.4169 11.1815 18.0892 10.1199 20.7982 9.09484C20.8348 9.09484 20.8348 9.09484 20.8714 9.05823C21.3839 8.8752 21.75 9.13145 21.75 9.71717ZM13.3303 18.7592C13.3669 18.7226 13.3669 18.686 13.3669 18.686C13.4401 18.0271 13.4767 17.3681 13.5499 16.7092C13.5499 16.5628 13.6231 16.4163 13.733 16.3065C15.4901 14.7324 17.2473 13.1583 19.0044 11.5842C19.1143 11.4743 19.2241 11.4011 19.3339 11.2913C19.3705 11.2547 19.4437 11.2181 19.4071 11.1449C19.3705 11.0716 19.2973 11.0716 19.2241 11.0716C19.0777 11.0716 18.9678 11.1449 18.858 11.2181C16.6982 12.5726 14.5383 13.927 12.3785 15.3181C12.2687 15.3913 12.232 15.4645 12.2687 15.611C12.5249 16.4163 12.7812 17.2217 13.074 18.0271C13.1472 18.2101 13.2204 18.4664 13.3303 18.7592Z" fill="white"/>
@@ -151,26 +156,26 @@
     <div class="footer w-full py-5 bg-[#0D1C45] px-3 mx-auto">
       <div class="text-content max-w-screen-xl mx-auto flex flex-wrap justify-between items-center">
         <div class="text-[14px] [@media(min-width:576px)]:w-fit [@media(max-width:576px)]:w-full [@media(max-width:576px)]:text-center [@media(max-width:576px)]:mb-2">
-          <a class="text-[white]">“Uy Bozorim” Все права защищены</a>
+          <a class="text-[white]">“Uy Bozorim” @lang('front.himoyalangan')</a>
         </div>
         <div class="links [@media(max-width:1000px)]:hidden [@media(min-width:1000px)]:flex w-fit justify-between items-center">
           <a href="{{ route('about') }}" class="link mx-5 font-[500] text-[white] text-[16px]">
-            О нас
+            @lang('front.biz_haqimizda')
           </a>
           <a href="#branches" class="link mx-5 font-[500] text-[white] text-[16px]">
-            Филиалы
+            @lang('front.filiallar')
           </a>
           <a href="#partners" class="link mx-5 font-[500] text-[white] text-[16px]">
-            Партнеры
+            @lang('front.hamkorlar')
           </a>
           <a href="#contacts" class="link mx-5 font-[500] text-[white] text-[16px]">
-            Контакты
+            @lang('front.kontaktlar')
           </a>
         </div>
         <div
           class="text-[14px] [@media(min-width:576px)]:w-fit [@media(max-width:576px)]:w-full [@media(max-width:576px)]:text-center">
           <a class="text-[white]" href="https://sos.uz">
-            © Copyright 2023 - SOS Group
+            © Copyright {{ date('Y') }} - SOS Group
           </a>
         </div>
       </div>

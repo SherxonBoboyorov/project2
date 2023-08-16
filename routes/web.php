@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\IntegrationController;
 use App\Http\Controllers\Admin\NumberController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\PromotionalController;
+use App\Http\Controllers\Admin\ResultController;
 use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\IndexController;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
@@ -38,7 +39,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'integration' => IntegrationController::class,
         'number' => NumberController::class,
         'promotional' => PromotionalController::class,
-        'partner' => PartnerController::class
+        'partner' => PartnerController::class,
+        'feedback' => ResultController::class
     ]);
 });
 
@@ -50,6 +52,8 @@ Route::group(
     ], function(){ 
          Route::get('/', [IndexController::class, 'homepage'])->name('/');
          Route::get('about', [AboutController::class, 'about'])->name('about');
+         Route::post('save_callback', [IndexController::class, 'saveCallback'])->name('saveCallback');
+
     });
 
 

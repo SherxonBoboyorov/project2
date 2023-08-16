@@ -23,6 +23,7 @@
   textarea::placeholder,
   * {
     font-family: "Proxima Nova" !important;
+    color: #696969;
   }
 
   .nav-link-styles {
@@ -47,17 +48,9 @@
   }
 
   .infinity-wrapper:hover .slide-first,
-  .infinity-wrapper:hover .slide-second {
+  .infinity-wrapper:hover .slide-second,
+  .infinity-wrapper:hover .slide-thirth {
     animation-play-state: paused;
-  }
-
-  @keyframes horizontal-scrolling-animation {
-    0% {
-      left: 100%;
-    }
-    100% {
-      left: -100%;
-    }
   }
 
   .swiper-button-next:after,
@@ -83,6 +76,15 @@
     .swiper .swiper-button-next:after,
     .swiper .swiper-button-prev:after {
       font-size: 10px !important;
+    }
+  }
+
+  @keyframes horizontal-scrolling-animation {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: -100%;
     }
   }
 }
