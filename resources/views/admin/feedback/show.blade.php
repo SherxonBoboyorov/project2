@@ -46,7 +46,9 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="video">Videos</label>
-                                <video src="{{ asset($feedback->video) }}" style="width: 400px; height:200px" controls ></video>
+                                <video style="width: 400px; height:200px" controls >
+                                <source src="{{ asset($feedback->video) }}">
+                                </video>
                             </div>
                         </div><br><br>
 

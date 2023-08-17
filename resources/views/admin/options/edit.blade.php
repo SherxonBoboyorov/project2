@@ -35,6 +35,7 @@
                                     <option value="instagram" @if($option->key == 'instagram') selected @endif>Instagram</option>
                                     <option value="youtube" @if($option->key == 'youtube') selected @endif>Youtube</option>
                                     <option value="facebook" @if($option->key == 'facebook') selected @endif>Facebook</option>
+                                    <option value="twitter" @if($option->key == 'twitter') selected @endif >Twitter</option>
                                     <option value="telegram" @if($option->key == 'telegram') selected @endif>Telegram</option>
                                 </select>
                                 @if($errors->has('key'))

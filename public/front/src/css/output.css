@@ -1123,6 +1123,10 @@ body,
   width: 220px;
 }
 
+.w-\[260px\] {
+  width: 260px;
+}
+
 .w-\[30px\] {
   width: 30px;
 }
@@ -2364,6 +2368,14 @@ body,
      object-position: center;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
+.p-1\.5 {
+  padding: 0.375rem;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -3236,6 +3248,10 @@ body,
 
 .\[\&\>\.swiper-slide\.swiper-slide-active\]\:opacity-100>.swiper-slide.swiper-slide-active {
   opacity: 1;
+}
+
+.\[\&\>path\]\:fill-\[\#0D2668\]>path {
+  fill: #0D2668;
 }
 
 @media(max-width:1000px) {

@@ -71,6 +71,8 @@
                     <img src="{{ asset('front/src/icons/bi_youtube.svg') }}" alt="" />
                   </a>
                 </div>
+
+
                 <a href="{{ $options->where('key', 'telegram')->first()->value }}" class="sm-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                     <rect width="30" height="30" rx="15" fill="#0D2668" />

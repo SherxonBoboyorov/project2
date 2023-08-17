@@ -34,6 +34,7 @@
                                   <option value="instagram">Instagram</option>
                                   <option value="youtube">Youtube</option>
                                   <option value="facebook">Facebook</option>
+                                  <option value="twitter">Twitter</option>
                                   <option value="telegram">Telegram</option>
                               </select>
                               @if($errors->has('key'))
