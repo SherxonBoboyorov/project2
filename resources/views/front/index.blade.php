@@ -183,7 +183,6 @@
       <div class="bg-[#F3F4F7] w-full mx-auto">
         <!-- Our Branches start -->
         <div id="branches" class="our-branches w-full mx-auto h-fit mt-16 py-14 px-5">
-          @foreach($articles as $article)
             
           <!-- Text content start -->
           <div class="text-content px-3 mx-auto max-w-[1000px] overflow-hidden">
@@ -195,7 +194,7 @@
 
             <!-- Description start -->
             <div class="description text-center [@media(min-width:576px)]:mt-3 [@media(max-width:576px)]:mt-1 text-[#696969] [@media(min-width:768px)]:text-[20px] [@media(max-width:768px)]:text-[18px] [@media(max-width:576px)]:text-[14px]" >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              @lang('front.moretext')
             </div>
             <!-- Description end -->
           </div>
@@ -203,6 +202,8 @@
 
           <!-- Branches container start -->
           <div class="branches-container max-w-screen-xl mx-auto my-12 grid">
+          @foreach($articles as $article)
+
             <!-- Brach cards start -->
             <div class="box [@media(min-width:900px)]:h-[270px] [@media(max-width:900px)]:h-[220px] bg-white text p-4 flex items-center">
               <!-- Text Content start -->
@@ -251,7 +252,7 @@
 
               <!-- Description start -->
               <div class="description text-center [@media(min-width:576px)]:mt-3 [@media(max-width:576px)]:mt-1 text-[white] [@media(min-width:768px)]:text-[20px] [@media(max-width:768px)]:text-[17px]" >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                @lang('front.surovnoma')
               </div>
               <!-- Description end -->
             </div>
@@ -429,7 +430,7 @@
               <!-- Title start -->
               <div
                 class="title text-center text-[white] [@media(min-width:768px)]:text-[40px] [@media(min-width:576px)]:text-[30px] [@media(max-width:576px)]:text-[24px] font-[600]" >
-                @lang('front.fikrlar')
+                @lang('front.raqamlarda')
               </div>
               <!-- Title end -->
             </div>

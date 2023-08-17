@@ -1,12 +1,13 @@
 <?php
 
 return [
-    'kompaniya_haqida' => 'Kompaniya haqida',
-    'bizning_filiallarimiz' => 'Bizning filiallarimiz',
-    'qayta_aloqa' => 'Qayta a\'loqa',
+    'kompaniya_haqida' => 'Kompaniyamiz haqida',
+    'bizning_filiallarimiz' => 'Bizning studiyalarimiz',
+    'qayta_aloqa' => 'Biz samarali reklama qilamiz',
+    'surovnoma' => 'So‘rovnoma qoldiring va biz siz bilan bog\'lanamiz',
     'surov_qoldiring' => 'So\'rov qoldiring va biz siz bilan bog\'lanamiz',
     'yuborish' => 'Yuborish',
-    'fikrlar' => 'Mijozlarimizdan fikr-mulohazalar',
+    'fikrlar' => 'Klientlarimizning kompaniyamiz haqidagi fikrlari',
     'batafsil' => 'Ko\'proq',
     'faq' => 'Ko\'p so\'raladigan savollar',
     'reklama' => 'Reklama integratsiyasi',
@@ -23,8 +24,10 @@ return [
     'fikr_qoldiring' => 'Fikr qoldiring',
     'video_yuklash' => 'Video yuklab olish',
     'ism' => 'Ism',
-    'telefon' => 'Telefon',
-    'izoh' => 'Izoh'
+    'telefon' => 'Telefon raqam',
+    'izoh' => 'Izoh',
+    'moretext' => 'Biz butun O\'zbekiston bo\'ylab ko\'chmas mulk reklama agentligimizni ochmoqdamiz.',
+    'raqamlarda' => 'Kompaniyamiz raqamlarda'
 
 ];
 
