@@ -86,64 +86,75 @@
   <div class="infinity-wrapper mb-[75px] relative flex justify-between items-center py-10 w-full bg-[#0D2668] overflow-hidden">
     <div class="slide-first flex absolute left-0 w-full [@media(max-width:540px)]:justify-around [@media(max-width:540px)]:pl-2 [@media(min-width:540px)]:justify-evenly items-center">
       <div class="slide w-fit text-[white] text-[18px]">
-        Lorem ipsum dolor sit amet.
+        @lang('front.biz_samarali_reklama_qilamiz').
       </div>
       <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5" ></div>
   
       <div class="slide w-fit text-white text-[18px] [@media(min-width:540px)]:block [@media(max-width:540px)]:hidden" >
-        Lorem ipsum dolor sit amet.
+                @lang('front.biz_samarali_reklama_qilamiz').
+
       </div>
       <div class="dot rounded-full bg-white w-[10px] h-[10px] mx-5 [@media(min-width:540px)]:block [@media(max-width:540px)]:hidden" ></div>
   
       <div class="slide w-fit text-white text-[18px] [@media(min-width:820px)]:block [@media(max-width:820px)]:hidden" >
-        Lorem ipsum dolor sit amet.
+                @lang('front.biz_samarali_reklama_qilamiz').
+
       </div>
       <div class="dot rounded-full bg-white w-[10px] h-[10px] mx-5 [@media(min-width:820px)]:block [@media(max-width:820px)]:hidden" ></div>
   
       <div class="slide w-fit text-[white] text-[18px] [@media(min-width:1085px)]:block [@media(max-width:1085px)]:hidden" >
-        Lorem ipsum dolor sit amet.
+                @lang('front.biz_samarali_reklama_qilamiz').
+
       </div>
       <div  class="dot rounded-full bg-white w-[10px] h-[10px] mx-5 [@media(min-width:1085px)]:block [@media(max-width:1085px)]:hidden" ></div>
   
       <div class="slide w-fit text-white text-[18px] [@media(min-width:1600px)]:block [@media(max-width:1400px)]:hidden" >
-        Lorem ipsum dolor sit amet.
+                @lang('front.biz_samarali_reklama_qilamiz').
+
       </div>
       <div class="dot rounded-full bg-white w-[10px] h-[10px] mx-5 [@media(min-width:1600px)]:block [@media(max-width:1400px)]:hidden" ></div>
   
       <div class="slide w-fit text-[white] text-[18px] [@media(min-width:1700px)]:block [@media(max-width:1700px)]:hidden" >
-        Lorem ipsum dolor sit amet.
+                @lang('front.biz_samarali_reklama_qilamiz').
+
       </div>
       <div class="dot rounded-full bg-white w-[10px] h-[10px] [@media(min-width:1700px)]:block [@media(max-width:1700px)]:hidden ml-6 mr-5" ></div>
     </div>
   
     <div class="slide-second flex [@media(max-width:540px)]:justify-around [@media(min-width:540px)]:justify-evenly items-center w-full absolute left-[100%]" >
       <div class="slide w-fit text-[#ffffff] text-[18px]">
-        Lorem ipsum dolor sit amet.
+                @lang('front.biz_samarali_reklama_qilamiz').
+
       </div>
       <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5" ></div>
   
       <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:540px)]:block [@media(max-width:540px)]:hidden" >
-        Lorem ipsum dolor sit amet.
+                @lang('front.biz_samarali_reklama_qilamiz').
+
       </div>
       <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:540px)]:block [@media(max-width:540px)]:hidden" ></div>
   
       <div  class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:820px)]:block [@media(max-width:820px)]:hidden" >
-        Lorem ipsum dolor sit amet.
+                @lang('front.biz_samarali_reklama_qilamiz').
+
       </div>
       <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:820px)]:block [@media(max-width:820px)]:hidden" ></div>
   
       <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:1085px)]:block [@media(max-width:1085px)]:hidden" >
-        Lorem ipsum dolor sit amet.
+                @lang('front.biz_samarali_reklama_qilamiz').
+
       </div>
       <div  class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:1085px)]:block [@media(max-width:1085px)]:hidden" ></div>
   
       <div  class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:1600px)]:block [@media(max-width:1400px)]:hidden" >
-        Lorem ipsum dolor sit amet.
+                @lang('front.biz_samarali_reklama_qilamiz').
+
       </div>
       <div  class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:1600px)]:block [@media(max-width:1400px)]:hidden" ></div>
   
       <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:1700px)]:block [@media(max-width:1700px)]:hidden" >
-        Lorem ipsum dolor sit amet.
+                @lang('front.biz_samarali_reklama_qilamiz').
+
       </div>
       <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] ml-6 mr-5 [@media(min-width:1700px)]:block [@media(max-width:1700px)]:hidden" ></div>
     </div>
@@ -279,61 +290,55 @@
         </div>
         <!-- Form end -->
 
-        <!-- Feedback from our clients start -->
-        <div class="feedback max-w-screen-xl mx-auto px-3 py-16">
-          <!-- Text content start -->
-          <div class="text-content pl-3 pr-4 mx-auto max-w-[1000px] overflow-hidden">
-            <!-- Title start -->
-            <div class="title text-center [@media(min-width:576px)]:text-[35px] [@media(max-width:576px)]:text-[26px] text-[#0D2668] font-[600]">
-              @lang('front.fikrlar')
-            </div>
-            <!-- Title end -->
-          </div>
-          <!-- Text content end -->
+         
+          <!-- Feedback from our clients start -->
+    <div class="feedback max-w-screen-xl mx-auto px-3 py-16">
+      <!-- Text content start -->
+      <div class="text-content pl-3 pr-4 mx-auto max-w-[1000px] overflow-hidden">
+        <!-- Title start -->
+        <div class="title text-center [@media(min-width:576px)]:text-[35px] [@media(max-width:576px)]:text-[26px] text-[#0D2668] font-[600]">
+           @lang('front.fikrlar')
+        </div>
+        <!-- Title end -->
+      </div>
+      <!-- Text content end -->
 
-          <div id="videosWrapper" class="card-wrapper mt-3 w-full mx-auto flex flex-wrap">
-            @foreach($events as $event)
-              
-            <div class="video-card 1 [@media(min-width:500px)]:w-[33.3%] [@media(min-width:420px)]:w-[50%] [@media(max-width:420px)]:w-[100%] overflow-hidden p-2">
-              <div class="w-full shadow-md h-full bg-white">
-                <div class="img-content [@media(min-width:768px)]:h-[250px] [@media(min-width:650px)]:h-[180px] [@media(min-width:420px)]:h-[120px] [@media(max-width:420px)]:h-[180px] relative" >
-                  <div id="video-play-btn" class="play [@media(min-width:768px)]:w-[40px] [@media(min-width:768px)]:h-[40px] [@media(max-width:768px)]:w-[25px] [@media(max-width:768px)]:h-[25px] cursor-pointer absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
-                    {{-- <svg onclick="activeVideo(event)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none" class="w-full h-full">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M30 0C13.4314 0 0 13.4316 0 30C0 46.5684 13.4314 60 30 60C46.5686 60 60 46.5684 60 30C60 13.4316 46.5686 0 30 0ZM26 36.9282L38 30L26 23.0718V36.9282Z" fill="white" />
-                    </svg> --}}
-                  </div>
-                  <a>
-                    <img id="videoImg" class="w-full h-full object-cover" src="{{ asset($event->image) }}" />
-                  </a>
-                </div>
-                <div class="text-content h-full overflow-hidden [@media(min-width:700px)]:py-2 [@media(max-width:700px)]:py-1 px-3" >
-                  <!-- Text Content start -->
-                  <div class="text-content py-2 h-full w-full overflow-hidden">
-                    <!-- Title start -->
-                    <div class="title [@media(min-width:700px)]:text-[18px] [@media(max-width:700px)]:text-[16px] text-[#0D2668] font-[600]" >
-                      {{ $event->{'title_' . app()->getLocale()} }}
-                    </div>
-                    <!-- Title end -->
-
-                    <!-- Description start -->
-                    <div class="description mt-1 [@media(min-width:700px)]:max-h-[115px] [@media(max-width:700px)]:max-h-[60px] overflow-hidden [@media(min-width:700px)]:text-[15px] [@media(max-width:700px)]:text-[13px]" >
-                      {!! $event->{'content_' . app()->getLocale()} !!}
-                    </div>
-                    <!-- Description end -->
-                  </div>
-                  <!-- Text Content end -->
-                </div>
+      <div id="videosWrapper" class="card-wrapper mt-3 w-full mx-auto flex flex-wrap">
+        @foreach($events as $event)
+        <div class="video-card 1 [@media(min-width:768px)]:w-[33.3%] [@media(min-width:576px)]:w-[50%] [@media(max-width:576px)]:w-[100%] overflow-hidden p-2">
+          <div class="w-full rounded-[4px] overflow-hidden shadow-md h-full bg-white p-5">
+            <div class="head w-full grid items-center" style="grid-template-columns: 60px auto">
+              <div class="img-content overflow-hidden w-[60px] h-[60px] rounded-[50%]">
+                <img src="{{ asset($event->image) }}" class="w-full h-full" alt="" />
+              </div>
+              <div class="title-content text-[#0D2668] text-[18px] font-[600] pl-3" >
+              {{ $event->{'title_' . app()->getLocale()} }}
               </div>
             </div>
-            @endforeach
+            <div class="text-content h-full overflow-hidden py-2">
+              <!-- Text Content start -->
+              <div class="text-content pt-2 h-full w-full overflow-hidden">
+                <!-- Description start -->
+                <div class="description [@media(min-width:700px)]:max-h-[115px] [@media(max-width:700px)]:max-h-[85px] overflow-hidden text-[15px]" >
+                {!! $event->{'content_' . app()->getLocale()} !!}
+                </div>
+                <!-- Description end -->
+              </div>
+              <!-- Text Content end -->
+            </div>
           </div>
-                  
-          <div class="button-content mt-3 w-full flex justify-center items-center">
-            <button onclick="moreVideo()" type="button"  class="border-none mt-5 [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[white] bg-[#0D2668]" >
-              @lang('front.batafsil')
-            </button>
-          </div>
+        </div>
+        @endforeach
       </div>
+
+      <div class="button-content mt-3 w-full flex justify-center items-center">
+        <button onclick="moreVideo()" type="button" class="border-none mt-5 [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[white] bg-[#0D2668]">
+        @lang('front.batafsil')
+        </button>
+      </div>
+    </div>
+    <!-- Feedback from our clients end -->
+    
 
         <!-- Feedback Modal start -->
         <div id="feedback-backdrop" class="hidden backdrop px-5 fixed z-50 justify-center items-center top-0 left-0 w-full h-full bg-[rgb(0,0,0,0.60)]">
@@ -644,12 +649,12 @@
                 </defs>
               </svg>
             </a>
-            <a href="{{ $options->where('key', 'facebook')->first()->value }}" class="sm-icon">
+            {{-- <a href="{{ $options->where('key', 'facebook')->first()->value }}" class="sm-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 30 30" fill="none">
                 <rect width="30" height="30" rx="15" fill="white" />
                 <path d="M18.2451 15H16.2892V22H13.3725V15H12V12.5294H13.3725V10.9167C13.3725 9.78431 13.9216 8 16.2892 8H18.451V10.402H16.9069C16.6667 10.402 16.2892 10.5392 16.2892 11.0882V12.5294H18.4853L18.2451 15Z" fill="#0D2668"/>
               </svg>
-            </a>
+            </a> --}}
 
             <a href="https://twitter.com/Uy_bozorim" class="sm-icon border rounded-full p-1.5 bg-white">
               <svg class="[&>path]:fill-[#0D2668]" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 30 30">

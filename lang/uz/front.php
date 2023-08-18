@@ -27,7 +27,8 @@ return [
     'telefon' => 'Telefon raqam',
     'izoh' => 'Izoh',
     'moretext' => 'Biz butun O\'zbekiston bo\'ylab ko\'chmas mulk reklama agentligimizni ochmoqdamiz.',
-    'raqamlarda' => 'Kompaniyamiz raqamlarda'
+    'raqamlarda' => 'Kompaniyamiz raqamlarda',
+    'biz_samarali_reklama_qilamiz' => 'Biz samarali reklama qilamiz'
 
 ];
 

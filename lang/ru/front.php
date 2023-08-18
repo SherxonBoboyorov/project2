@@ -2,7 +2,7 @@
 
 return [
      'kompaniya_haqida' => 'Про нашу компанию',
-     'bizning_filiallarimiz' => 'Наши студии',
+     'bizning_filiallarimiz' => 'Наши точки',
      'qayta_aloqa' => 'Мы рекламируем качественно и эффективно',
      'surovnoma' => 'Оставьте заявку , и мы свяжемся с вами.',
      'surov_qoldiring' => 'Оставьте заявку и мы свяжемся с вами',
