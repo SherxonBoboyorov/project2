@@ -527,7 +527,9 @@ body,
   border-bottom: none !important;
 }
 
-.text-description-accordion {
+.text-description-accordion,
+  .text-description-accordion > p,
+  .text-description-accordion > * {
   color: #0d2668 !important;
 }
 
