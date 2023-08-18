@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('front/src/images/favicon.png') }}"/>
+    <link rel="icon"type="image/png"sizes="16x16" href="{{ asset('front/src/images/favicon.png') }}"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <link href="{{ asset('front/src/css/output.css') }}" rel="stylesheet" />
     <link href="{{ asset('front/src/css/custom.css') }}" rel="stylesheet" />
@@ -71,8 +73,6 @@
                     <img src="{{ asset('front/src/icons/bi_youtube.svg') }}" alt="" />
                   </a>
                 </div>
-
-
                 <a href="{{ $options->where('key', 'telegram')->first()->value }}" class="sm-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                     <rect width="30" height="30" rx="15" fill="#0D2668" />
@@ -105,7 +105,7 @@
                   <a href="{{ route('about') }}" class="nav-link-styles">@lang('front.biz_haqimizda')</a>
                 </div>
                 <div class="link my-3">
-                  <a href="{{ route('about') }}" class="nav-link-styles">@lang('front.filiallar')</a>
+                  <a href="#branches" class="nav-link-styles">@lang('front.filiallar')</a>
                 </div>
                 <div class="link my-3">
                   <a href="#partners" class="nav-link-styles">@lang('front.hamkorlar')</a>

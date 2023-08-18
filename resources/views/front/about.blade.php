@@ -4,27 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
-    <link href="{{ asset('front/src/css/output.css') }}" rel="stylesheet" />
-    <link href="{{ asset('front/src/css/custom.css') }}" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
-    />
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
-
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('front/src/images/favicon.png') }}"/>
+    <link rel="icon"type="image/png"sizes="16x16" href="{{ asset('front/src/images/favicon.png') }}"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link href="{{ asset('front/src/css/output.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('front/src/css/custom.css') }}" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Uy Bozorim | About</title>
   </head>
   <body>
@@ -181,7 +170,7 @@
                 <div
                   class="sm-icons flex justify-between items-center w-[110px]"
                 >
-                  <a href="#" class="sm-icon">
+                  <a href="{{ $options->where('key', 'instagram')->first()->value }}" class="sm-icon">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="30"
@@ -208,13 +197,13 @@
                     class="sm-icon bg-[#0d2668] w-[30px] mx-2 h-[30px] rounded-full"
                   >
                     <a
-                      href="#"
+                      href="{{ $options->where('key', 'youtube')->first()->value }}"
                       class="flex justify-center items-center w-full h-full"
                     >
-                      <img src="./src/icons/bi_youtube.svg" alt="" />
+                      <img src="{{ asset('front/src/icons/bi_youtube.svg') }}" alt="" />
                     </a>
                   </div>
-                  <a href="#" class="sm-icon">
+                  <a href="{{ $options->where('key', 'telegram')->first()->value }}" class="sm-icon">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="30"

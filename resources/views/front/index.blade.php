@@ -383,7 +383,7 @@
           <div class="text-content mx-auto max-w-[1000px] w-full overflow-hidden">
             <!-- Title start -->
             <div class="title text-center text-[#0D2668] [@media(min-width:768px)]:text-[40px] [@media(min-width:576px)]:text-[30px] [@media(max-width:576px)]:text-[24px] font-[600]">
-              @lang('front.qayta_aloqa')
+              @lang('front.faq')
             </div>
             <!-- Title end -->
 
@@ -411,7 +411,7 @@
               </button>
 
               <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''" >
-                <div class="py-5 text-description [@media(min-width:576)]:text-[18px] [@media(max-width:576)]:text-[14px] text-[#0D2668]">
+                <div class="py-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[15px] text-description-accordion">
                   {!! $faq->{'content_' . app()->getLocale()} !!}
                 </div>
               </div>
