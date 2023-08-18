@@ -298,11 +298,11 @@
               <div class="w-full shadow-md h-full bg-white">
                 <div class="img-content [@media(min-width:768px)]:h-[250px] [@media(min-width:650px)]:h-[180px] [@media(min-width:420px)]:h-[120px] [@media(max-width:420px)]:h-[180px] relative" >
                   <div id="video-play-btn" class="play [@media(min-width:768px)]:w-[40px] [@media(min-width:768px)]:h-[40px] [@media(max-width:768px)]:w-[25px] [@media(max-width:768px)]:h-[25px] cursor-pointer absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
-                    <svg onclick="activeVideo(event)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none" class="w-full h-full">
+                    {{-- <svg onclick="activeVideo(event)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none" class="w-full h-full">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M30 0C13.4314 0 0 13.4316 0 30C0 46.5684 13.4314 60 30 60C46.5686 60 60 46.5684 60 30C60 13.4316 46.5686 0 30 0ZM26 36.9282L38 30L26 23.0718V36.9282Z" fill="white" />
-                    </svg>
+                    </svg> --}}
                   </div>
-                  <a data-fancybox href="{{ $event->frame }}">
+                  <a>
                     <img id="videoImg" class="w-full h-full object-cover" src="{{ asset($event->image) }}" />
                   </a>
                 </div>
