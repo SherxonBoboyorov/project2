@@ -82,84 +82,144 @@
       </div>
       <!-- About we some end -->
 
+     <!-- Infinity scrolling texts start -->
+      <!-- uzb -->
+      <div class="infinity-wrapper infinity-wrapper-uz mb-[75px] relative justify-between items-center w-full bg-[#0D2668] overflow-hidden" style="padding: 40px 0 ">
+        <div class="slide-first flex absolute left-0 w-full [@media(max-width:540px)]:justify-around [@media(max-width:540px)]:pl-2 [@media(min-width:540px)]:justify-evenly items-center"  style="top:34%;">
+          <div class="slide w-fit text-[#ffffff] text-[18px]">
+            Biz samarali reklama qilamiz
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5"></div>
+
+          <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:545px)]:block [@media(max-width:545px)]:hidden">
+            Biz samarali reklama qilamiz
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:545px)]:block [@media(max-width:545px)]:hidden"></div>
+
+          <div class="slide w-fit text-white text-[18px] [@media(min-width:820px)]:block [@media(max-width:820px)]:hidden">
+            Biz samarali reklama qilamiz
+          </div>
+          <div class="dot rounded-full bg-white w-[10px] h-[10px] mx-5 [@media(min-width:820px)]:block [@media(max-width:820px)]:hidden"></div>
+
+          <div class="slide w-fit text-[white] text-[18px] [@media(min-width:1085px)]:block [@media(max-width:1085px)]:hidden">
+            Biz samarali reklama qilamiz
+          </div>
+          <div class="dot rounded-full bg-white w-[10px] h-[10px] mx-5 [@media(min-width:1085px)]:block [@media(max-width:1085px)]:hidden"></div>
+
+          <div class="slide w-fit text-white text-[18px] [@media(min-width:1600px)]:block [@media(max-width:1400px)]:hidden">
+            Biz samarali reklama qilamiz
+          </div>
+          <div class="dot rounded-full bg-white w-[10px] h-[10px] mx-5 [@media(min-width:1600px)]:block [@media(max-width:1400px)]:hidden"></div>
+
+          <div class="slide w-fit text-[white] text-[18px] [@media(min-width:1700px)]:block [@media(max-width:1700px)]:hidden">
+            Biz samarali reklama qilamiz
+          </div>
+          <div class="dot rounded-full bg-white w-[10px] h-[10px] [@media(min-width:1700px)]:block [@media(max-width:1700px)]:hidden ml-6 mr-5"></div>
+        </div>
+
+        <div class="slide-second flex [@media(max-width:540px)]:justify-around [@media(min-width:540px)]:justify-evenly items-center w-full absolute left-[100%]"  style="top:34%;">
+          <div class="slide w-fit text-[#ffffff] text-[18px]">
+            Biz samarali reklama qilamiz
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5"
+          ></div>
+
+          <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:545px)]:block [@media(max-width:545px)]:hidden">
+            Biz samarali reklama qilamiz
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:540px)]:block [@media(max-width:540px)]:hidden"></div>
+
+          <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:820px)]:block [@media(max-width:820px)]:hidden">
+            Biz samarali reklama qilamiz
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:820px)]:block [@media(max-width:820px)]:hidden"></div>
+
+          <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:1085px)]:block [@media(max-width:1085px)]:hidden">
+            Biz samarali reklama qilamiz
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:1085px)]:block [@media(max-width:1085px)]:hidden"></div>
+
+          <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:1600px)]:block [@media(max-width:1400px)]:hidden">
+            Biz samarali reklama qilamiz
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:1600px)]:block [@media(max-width:1400px)]:hidden"></div>
+
+          <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:1700px)]:block [@media(max-width:1700px)]:hidden">
+            Biz samarali reklama qilamiz
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] ml-6 mr-5 [@media(min-width:1700px)]:block [@media(max-width:1700px)]:hidden"></div>
+        </div>
+      </div>
+
+      <!-- rus -->
+      <div class="infinity-wrapper infinity-wrapper-ru mb-[75px] relative justify-between items-center w-full bg-[#0D2668] overflow-hidden" style="padding: 40px 0 ">
+        <div class="slide-first flex absolute left-0 w-full [@media(max-width:540px)]:justify-around [@media(max-width:540px)]:pl-2 [@media(min-width:540px)]:justify-evenly items-center" style="top:34%;">
+          <div class="slide w-fit text-[#ffffff] [@media(min-width:440px)]:text-[18px] [@media(max-width:440px)]:text-[15px]" >
+            Мы рекламируем качественно и эффективно
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5"></div>
+
+          <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:860px)]:block [@media(max-width:860px)]:hidden">
+            Мы рекламируем качественно и эффективно
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:860px)]:block [@media(max-width:860px)]:hidden"></div>
+
+          <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:1300px)]:block [@media(max-width:1300px)]:hidden">
+            Мы рекламируем качественно и эффективно
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:1300px)]:block [@media(max-width:1300px)]:hidden"></div>
+
+          <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:1900px)]:block [@media(max-width:1900px)]:hidden">
+            Мы рекламируем качественно и эффективно
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:1900px)]:block [@media(max-width:1900px)]:hidden"></div>
+
+          <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:2660px)]:block [@media(max-width:2660px)]:hidden">
+            Мы рекламируем качественно и эффективно
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:2660px)]:block [@media(max-width:2660px)]:hidden"></div>
+
+          <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:2850px)]:block [@media(max-width:2850px)]:hidden">
+            Мы рекламируем качественно и эффективно
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] [@media(min-width:2850px)]:block [@media(max-width:2850px)]:hidden ml-6 mr-5"></div>
+        </div>
+        <div class="slide-second flex [@media(max-width:540px)]:justify-around [@media(min-width:540px)]:justify-evenly items-center w-full absolute left-[100%]"  style="top:34%;">
+          <div class="slide w-fit text-[#ffffff] [@media(min-width:440px)]:text-[18px] [@media(max-width:440px)]:text-[15px]">
+            Мы рекламируем качественно и эффективно
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5"></div>
+
+          <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:860px)]:block [@media(max-width:860px)]:hidden">
+            Мы рекламируем качественно и эффективно
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:860px)]:block [@media(max-width:860px)]:hidden"></div>
+
+          <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:1300px)]:block [@media(max-width:1300px)]:hidden">
+            Мы рекламируем качественно и эффективно
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:1300px)]:block [@media(max-width:1300px)]:hidden"></div>
+
+          <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:1900px)]:block [@media(max-width:1900px)]:hidden">
+            Мы рекламируем качественно и эффективно
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:1900px)]:block [@media(max-width:1900px)]:hidden"></div>
+
+          <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:2660px)]:block [@media(max-width:2660px)]:hidden">
+            Мы рекламируем качественно и эффективно
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:2660px)]:block [@media(max-width:2660px)]:hidden" ></div>
+
+          <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:2850px)]:block [@media(max-width:2850px)]:hidden">
+            Мы рекламируем качественно и эффективно
+          </div>
+          <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] [@media(min-width:2850px)]:block [@media(max-width:2850px)]:hidden ml-6 mr-5"></div>
+        </div>
+      </div>
+
       <!-- Infinity scrolling texts start -->
-  <div class="infinity-wrapper mb-[75px] relative flex justify-between items-center py-10 w-full bg-[#0D2668] overflow-hidden">
-    <div class="slide-first flex absolute left-0 w-full [@media(max-width:540px)]:justify-around [@media(max-width:540px)]:pl-2 [@media(min-width:540px)]:justify-evenly items-center">
-      <div class="slide w-fit text-[white] text-[18px]">
-        @lang('front.biz_samarali_reklama_qilamiz').
-      </div>
-      <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5" ></div>
-  
-      <div class="slide w-fit text-white text-[18px] [@media(min-width:540px)]:block [@media(max-width:540px)]:hidden" >
-                @lang('front.biz_samarali_reklama_qilamiz').
 
-      </div>
-      <div class="dot rounded-full bg-white w-[10px] h-[10px] mx-5 [@media(min-width:540px)]:block [@media(max-width:540px)]:hidden" ></div>
-  
-      <div class="slide w-fit text-white text-[18px] [@media(min-width:820px)]:block [@media(max-width:820px)]:hidden" >
-                @lang('front.biz_samarali_reklama_qilamiz').
-
-      </div>
-      <div class="dot rounded-full bg-white w-[10px] h-[10px] mx-5 [@media(min-width:820px)]:block [@media(max-width:820px)]:hidden" ></div>
-  
-      <div class="slide w-fit text-[white] text-[18px] [@media(min-width:1085px)]:block [@media(max-width:1085px)]:hidden" >
-                @lang('front.biz_samarali_reklama_qilamiz').
-
-      </div>
-      <div  class="dot rounded-full bg-white w-[10px] h-[10px] mx-5 [@media(min-width:1085px)]:block [@media(max-width:1085px)]:hidden" ></div>
-  
-      <div class="slide w-fit text-white text-[18px] [@media(min-width:1600px)]:block [@media(max-width:1400px)]:hidden" >
-                @lang('front.biz_samarali_reklama_qilamiz').
-
-      </div>
-      <div class="dot rounded-full bg-white w-[10px] h-[10px] mx-5 [@media(min-width:1600px)]:block [@media(max-width:1400px)]:hidden" ></div>
-  
-      <div class="slide w-fit text-[white] text-[18px] [@media(min-width:1700px)]:block [@media(max-width:1700px)]:hidden" >
-                @lang('front.biz_samarali_reklama_qilamiz').
-
-      </div>
-      <div class="dot rounded-full bg-white w-[10px] h-[10px] [@media(min-width:1700px)]:block [@media(max-width:1700px)]:hidden ml-6 mr-5" ></div>
-    </div>
-  
-    <div class="slide-second flex [@media(max-width:540px)]:justify-around [@media(min-width:540px)]:justify-evenly items-center w-full absolute left-[100%]" >
-      <div class="slide w-fit text-[#ffffff] text-[18px]">
-                @lang('front.biz_samarali_reklama_qilamiz').
-
-      </div>
-      <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5" ></div>
-  
-      <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:540px)]:block [@media(max-width:540px)]:hidden" >
-                @lang('front.biz_samarali_reklama_qilamiz').
-
-      </div>
-      <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:540px)]:block [@media(max-width:540px)]:hidden" ></div>
-  
-      <div  class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:820px)]:block [@media(max-width:820px)]:hidden" >
-                @lang('front.biz_samarali_reklama_qilamiz').
-
-      </div>
-      <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:820px)]:block [@media(max-width:820px)]:hidden" ></div>
-  
-      <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:1085px)]:block [@media(max-width:1085px)]:hidden" >
-                @lang('front.biz_samarali_reklama_qilamiz').
-
-      </div>
-      <div  class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:1085px)]:block [@media(max-width:1085px)]:hidden" ></div>
-  
-      <div  class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:1600px)]:block [@media(max-width:1400px)]:hidden" >
-                @lang('front.biz_samarali_reklama_qilamiz').
-
-      </div>
-      <div  class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] mx-5 [@media(min-width:1600px)]:block [@media(max-width:1400px)]:hidden" ></div>
-  
-      <div class="slide w-fit text-[#ffffff] text-[18px] [@media(min-width:1700px)]:block [@media(max-width:1700px)]:hidden" >
-                @lang('front.biz_samarali_reklama_qilamiz').
-
-      </div>
-      <div class="dot rounded-full bg-[#ffffff] w-[10px] h-[10px] ml-6 mr-5 [@media(min-width:1700px)]:block [@media(max-width:1700px)]:hidden" ></div>
-    </div>
-  </div>
-  <!-- Infinity scrolling texts end -->
+ 
 
       <!-- Slider Room start -->
       <div class="slider-rooms mb-10">
@@ -279,7 +339,7 @@
                   <textarea id="userComment-first" name="'content" rows="3" class="w-full px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-white" placeholder="@lang('front.izoh')"></textarea>
                 </div>
                 <div class="button-content mt-3 w-full flex justify-center items-center">
-                  <button id="sent-feedback-button" type="button" class="border-none [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[white] bg-[#0D2668]">
+                  <button onclick="sentFeedback()" type="button" class="border-none [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[white] bg-[#0D2668]">
                     @lang('front.yuborish')
                   </button>
                 </div>
@@ -332,8 +392,8 @@
       </div>
 
       <div class="button-content mt-3 w-full flex justify-center items-center">
-        <button onclick="moreVideo()" type="button" class="border-none mt-5 [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[white] bg-[#0D2668]">
-        @lang('front.batafsil')
+        <button onclick="sentFeedback()" type="button" class="border-none mt-5 [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[white] bg-[#0D2668]">
+        @lang('front.fikr_qoldiring')
         </button>
       </div>
     </div>
@@ -618,7 +678,7 @@
             </div>
 
             <div class="description mt-2 text-[white] text-[19px]">
-              <a class="text-[white]" href="{{ $options->where('key', 'address_' . app()->getLocale())->first()->value }}">
+              <a class="text-[white]">
                 {{ $options->where('key', 'address_' . app()->getLocale())->first()->value }}
               </a>
               <br/>
@@ -628,7 +688,7 @@
           </div>
           <!-- Text content end -->
 
-          <div class="w-[260px] mt-8 flex justify-between">
+          <div class="w-[220px] mt-8 flex justify-between">
             <a href="{{ $options->where('key', 'instagram')->first()->value }}" class="sm-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 30 30" fill="none" >
                 <rect width="30" height="30" rx="15" fill="white" />
