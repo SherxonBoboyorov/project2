@@ -649,7 +649,7 @@
             @foreach($partners as $partner)
             <div class="item w-1/4 py-2 px-3 h-fit border-r-2 border-b-2 flex justify-center items-center overflow-hidden" >
               <a href="{{ $partner->link }}">
-                <img src="{{ asset($partner->image) }}" class="[@media(min-width:500px)]:w-[100px] [@media(max-width:500px)]:w-full object-center" alt=""/>
+                <img src="{{ asset($partner->image) }}" class="[@media(min-width:500px)]:w-[100px] [@media(min-width:500px)]:h-[100px] [@media(max-width:500px)]:w-full [@media(max-width:500px)]:h-full [@media(max-width:500px)]:w-full object-center" alt=""/>
               </a>
             </div>
             @endforeach
