@@ -27,7 +27,7 @@ class CreateVideo extends FormRequest
             'fullname' => 'required|string|max:255',
             'phone_number' => 'required|string|max:55',
             'content' => 'required',
-            'video' => 'required|file|mimetypes:video/mp4,mkv',
+            'video' => 'required|mimes:mpeg,ogg,mp4,webm,3gp,mov,flv,avi,wmv,ts,qt|max:2048'
         ];
     }
 }
