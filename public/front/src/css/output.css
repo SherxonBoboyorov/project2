@@ -465,7 +465,7 @@ body,
 
 .nav-link-styles {
   color: #0d2668;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -2454,6 +2454,11 @@ body,
   padding-right: 2rem;
 }
 
+.px-\[20px\] {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -3712,17 +3717,13 @@ body,
   .\[\@media\(min-width\:450px\)\]\:text-\[25px\] {
     font-size: 25px;
   }
+
+  .\[\@media\(min-width\:450px\)\]\:text-\[20px\] {
+    font-size: 20px;
+  }
 }
 
 @media(min-width:500px) {
-  .\[\@media\(min-width\:500px\)\]\:h-\[50px\] {
-    height: 50px;
-  }
-
-  .\[\@media\(min-width\:500px\)\]\:h-\[80px\] {
-    height: 80px;
-  }
-
   .\[\@media\(min-width\:500px\)\]\:h-\[100px\] {
     height: 100px;
   }

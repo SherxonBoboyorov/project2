@@ -3,7 +3,7 @@
 @section('content')
 
       <!-- Bac img Container start -->
-      <div class="back-img relative w-full [@media(min-width:900px)]:h-[600px] [@media(min-width:768px)]:h-[500px] [@media(min-width:576px)]:h-[400px] [@media(max-width:576px)]:h-[250px] mt-[60px] [@media(max-width:449px)]:mt-[40px]">
+      <div class="back-img relative max-w-screen-xl mx-auto px-3 [@media(min-width:900px)]:h-[600px] [@media(min-width:768px)]:h-[500px] [@media(min-width:576px)]:h-[400px] [@media(max-width:576px)]:h-[250px] mt-[60px] [@media(max-width:449px)]:mt-[40px]">
         <!-- text Content start  -->
         @foreach($sliders as $slider)
           
@@ -40,7 +40,7 @@
       <!-- Bac img Container end -->
 
       <!-- About we some start -->
-      <div class="what-we-do h-fit px-5 max-w-screen-xl mx-auto [@media(max-width:850px)]:my-10 [@media(min-width:850px)]:my-20" >
+      <div class="what-we-do h-fit px-3 max-w-screen-xl mx-auto [@media(max-width:850px)]:my-10 [@media(min-width:850px)]:my-20" >
         @foreach ($pages as $page)
 
         <div class="flex justify-between items-center flex-wrap [@media(min-width:850px)]:h-[500px] [@media(max-width:850px)]:h-fit">
@@ -503,17 +503,23 @@
 
             <div class="number-wrapper flex flex-wrap justify-between items-start py-5 w-full mx-auto">
               @foreach($numbers as $number)
-              <div class="items [@media(min-width:600px)]:w-[30%] [@media(max-width:600px)]:w-[100%]" >
-                <div class="title text-center text-[white] [@media(min-width:768px)]:text-[60px] [@media(min-width:650px)]:text-[50px] [@media(max-width:650px)]:text-[40px] font-[600]">
-                  {{ $number->number }}
+              <div class="items [@media(min-width:600px)]:w-[30%] [@media(max-width:600px)]:w-[100%]">
+                <div id="" data-target="{{ $number->number }}"
+                  class="title number text-center text-[white] [@media(min-width:768px)]:text-[60px] [@media(min-width:650px)]:text-[50px] [@media(max-width:650px)]:text-[40px] font-[600]">
+                  0
                 </div>
-                <hr class="border-none bg-[#ffffff7d] h-[0.5px] mx-auto [@media(min-width:600px)]:w-[90%] [@media(min-width:600px)]:mt-2 [@media(min-width:600px)]:mb-6 [@media(max-width:600px)]:w-[70%] [@media(max-width:600px)]:mt-0 [@media(max-width:600px)]:mb-2" />
-                <div class="description title text-center text-[white] [@media(min-width:600px)]:text-[18px] [@media(max-width:600px)]:text-[16px]" >
+                <hr
+                  class="border-none bg-[#ffffff7d] h-[0.5px] mx-auto [@media(min-width:600px)]:w-[90%] [@media(min-width:600px)]:mt-2 [@media(min-width:600px)]:mb-6 [@media(max-width:600px)]:w-[70%] [@media(max-width:600px)]:mt-0 [@media(max-width:600px)]:mb-2" />
+                <div
+                  class="description title text-center text-[white] [@media(min-width:600px)]:text-[18px] [@media(max-width:600px)]:text-[16px]">
                   {{ $number->{'title_' . app()->getLocale()} }}
+                </div>
+                <div id="number-wrapper">
+                    
                 </div>
               </div>
               @endforeach
-            </div>
+             </div>
           </div>
         </div>
         <!-- Numbers end -->
